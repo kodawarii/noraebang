@@ -4,6 +4,10 @@ import TableRow from './TableRow';
 
 import './style-index.css';
 
+/**
+ * Current GET method is set to Local Backend server
+ */
+
 export default class Index extends Component {
 
   constructor(props) {
