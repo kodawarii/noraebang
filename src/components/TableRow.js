@@ -1,0 +1,51 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+class TableRow extends Component {
+
+  constructor(props) {
+        super(props);
+        this.delete = this.delete.bind(this);
+    }
+    delete() {
+        axios.get('http://localhost:4000/song/delete/'+this.props.obj._id)
+            .then(console.log('Deleted'))
+            .catch(err => console.log(err))
+    }
+  render() {
+    return (
+        <tr>
+          <td>
+            {this.props.obj.artist}
+          </td>
+          <td>
+            {this.props.obj.song_name}
+          </td>
+          <td>
+            {this.props.obj.URL}
+          </td>
+          <td>
+            {this.props.obj.length}
+          </td>
+          <td>
+            {this.props.obj.key}
+          </td>
+          <td>
+            {this.props.obj.max_key}
+          </td>
+          <td>
+            {this.props.obj.tj_number}
+          </td>
+          <td>
+            {this.props.obj.ky_number}
+          </td>
+          <td>
+            {this.props.obj.order}
+          </td>
+        </tr>
+    );
+  }
+}
+
+export default TableRow;
