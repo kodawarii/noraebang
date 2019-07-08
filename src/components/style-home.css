@@ -1,0 +1,19 @@
+.home{
+    text-align: center;
+}
+
+.mongo{
+    color: green;
+}
+
+.express{
+    color: rgb(179, 19, 19);
+}
+
+.react{
+    color: rgb(80, 203, 252);
+}
+
+.node{
+    color: lime;
+}

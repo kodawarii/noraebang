@@ -5,7 +5,7 @@ import TableRow from './TableRow';
 import './style-index.css';
 
 /**
- * Current GET method is set to Local Backend server
+ * Current GET method is set to LOCAL Backend server
  */
 
 export default class Index extends Component {
@@ -34,9 +34,9 @@ export default class Index extends Component {
 
   render() {
     return (
-      <div>
-       <h3 align="center">노래방 데이터</h3>
-          <table className="table table-striped" style={{ marginTop: 20 }}>
+      <div className="tableContainer">
+        <h2> 노래방 데이터</h2>
+          <table className="mytable" style={{ marginTop: 20 }}>
             <thead>
               <tr>
                 <th>가수</th>

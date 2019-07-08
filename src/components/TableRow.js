@@ -7,12 +7,19 @@ class TableRow extends Component {
   constructor(props) {
         super(props);
         this.delete = this.delete.bind(this);
-    }
-    delete() {
-        axios.get('http://localhost:4000/song/delete/'+this.props.obj._id)
-            .then(console.log('Deleted'))
-            .catch(err => console.log(err))
-    }
+  }
+
+  delete() {
+    axios.get('http://localhost:4000/song/delete/'+this.props.obj._id)
+      .then(console.log('Deleted'))
+      .catch(err => console.log(err))
+  }
+
+  handleClick() {
+    //window.location.assign(this.props.obj.URL, '_blank');
+    window.open(this.props.obj.URL, '_blank');
+  } 
+
   render() {
     return (
         <tr>
@@ -23,7 +30,7 @@ class TableRow extends Component {
             {this.props.obj.song_name}
           </td>
           <td>
-            {this.props.obj.URL}
+            <a onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</a>
           </td>
           <td>
             {this.props.obj.length}

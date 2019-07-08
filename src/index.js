@@ -7,9 +7,14 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>, document.getElementById('root')
+    <div>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+        <footer> Created by Eunbal/Talmo Developments 2019 &#169; </footer>
+    </div>, 
+    
+    document.getElementById('root')
 );
 
 serviceWorker.unregister();

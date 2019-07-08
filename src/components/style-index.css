@@ -1,9 +1,17 @@
-table td{
+.tableContainer h2{
+  text-align: center;
+}
+
+.mytable{
+  margin: 1em auto; /* Align Table within a div to the center */
+}
+
+.mytable td{
     border: 1px solid rgb(216, 216, 216);
     padding: 8px 12px 8px 12px;
   }
   
-  a{
+  .youtubeLink a{
     text-decoration: none;
     color: rgb(255, 92, 192);
   }
