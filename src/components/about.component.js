@@ -18,7 +18,7 @@ export default class About extends Component {
           Things I learnt (self taught) and used:
         </h3>
         <p>
-          HTML/CSS/JavaScript NoSQL HTTP Methods Git Source Control RESTful API 
+          HTML/CSS/JavaScript NoSQL HTTP Methods Git Source Control RESTful API Host Deployment mLab Azure AWS
         </p>
       </div>
     );
