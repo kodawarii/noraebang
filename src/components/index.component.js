@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import TableRow from './TableRow';
+import Empty from './Empty.component';
 
 import './style-index.css';
 
 /**
- * Current GET method is set to LOCAL Backend server
+ * @NOTE Current GET method is set to LOCAL Backend server
+ *
+ * @TODO Mobile: Have Title and Artist only, click on to expand and show more details
  */
 
 export default class Index extends Component {
@@ -31,8 +34,13 @@ export default class Index extends Component {
     });
   }
 
-
   render() {
+    let message = '';
+
+    if(this.state.songList.length == 0){
+      message =  <Empty/>
+    }
+
     return (
       <div className="tableContainer">
         <h2> 노래방 데이터</h2>
@@ -54,6 +62,7 @@ export default class Index extends Component {
               { this.tabRow() }
             </tbody>
           </table>
+          {message}
       </div>
     );
   }

@@ -1,21 +1,42 @@
+.tableContainer{
+  font-size: 18px;
+  text-align: center;
+}
+
 .tableContainer h2{
   text-align: center;
 }
 
 .mytable{
   margin: 1em auto; /* Align Table within a div to the center */
+  border-collapse: collapse;
 }
 
 .mytable th{
-  padding: 2px 50px 2px 50px;
+  background-color: rgb(46, 46, 46);
+  color: rgb(228, 228, 228);
+  text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
 }
 
 .mytable td{
-  border: 1px solid rgb(216, 216, 216);
-  padding: 8px 12px 8px 12px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  color: rgb(27, 27, 27);
 }
-  
-.youtubeLink a{
-  text-decoration: none;
-  color: rgb(255, 92, 192);
+
+.mytable th{
+  padding: 4px 50px 4px 50px;
 }
+
+.mytable td{
+  padding: 2px 12px 2px 12px;
+}
+
+.mytable tr:hover{
+  background-color: rgb(59, 59, 59);
+}
+
+.mytable tr:hover td{
+  color: rgb(228, 228, 228);
+  text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
+}
+
