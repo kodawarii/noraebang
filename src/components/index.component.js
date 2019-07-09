@@ -37,7 +37,7 @@ export default class Index extends Component {
   render() {
     let message = '';
 
-    if(this.state.songList.length == 0){
+    if(this.state.songList.length === 0){
       message =  <Empty/>
     }
 

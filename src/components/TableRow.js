@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class TableRow extends Component {
@@ -30,7 +29,9 @@ class TableRow extends Component {
             {this.props.obj.song_name}
           </td>
           <td>
-            <a onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</a>
+            <span className="youtubelink">
+              <a href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</a>
+            </span>
           </td>
           <td>
             {this.props.obj.length}

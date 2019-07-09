@@ -12,6 +12,21 @@
   border-collapse: collapse;
 }
 
+a{
+  color: rgb(156, 156, 156);
+  text-decoration: none;
+}
+
+.youtubelink{
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
 .mytable th{
   background-color: rgb(46, 46, 46);
   color: rgb(228, 228, 228);
@@ -28,7 +43,7 @@
 }
 
 .mytable td{
-  padding: 2px 12px 2px 12px;
+  padding: 8px 16px 8px 16px;
 }
 
 .mytable tr:hover{
@@ -39,4 +54,3 @@
   color: rgb(228, 228, 228);
   text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
 }
-
