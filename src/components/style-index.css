@@ -7,28 +7,41 @@
   text-align: center;
 }
 
-.mytable{
-  margin: 1em auto; /* Align Table within a div to the center */
-  border-collapse: collapse;
-}
-
 a{
   color: rgb(156, 156, 156);
   text-decoration: none;
+}
+
+/************** Responsive Media Queries */
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .mytable-s{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For Mobile: */
+  .mytable{
+    display: none;
+  }
+}
+
+/************** Desktop Design */
+.mytable{
+  margin: 1em auto; /* Align Table within a div to the center */
+  border-collapse: collapse;
 }
 
 .youtubelink{
   border: 1px solid rgb(175, 175, 175);
   border-radius: 10px;
   padding: 2px 8px 2px 8px;
-
-  -webkit-box-shadow: 0 8px 6px -6px black;
-	   -moz-box-shadow: 0 8px 6px -6px black;
-	        box-shadow: 0 8px 6px -6px black;
 }
 
 .mytable th{
   background-color: rgb(46, 46, 46);
+  padding: 4px 50px 4px 50px;
   color: rgb(228, 228, 228);
   text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
 }
@@ -36,14 +49,9 @@ a{
 .mytable td{
   border-bottom: 1px solid rgb(212, 212, 212);
   color: rgb(27, 27, 27);
-}
-
-.mytable th{
-  padding: 4px 50px 4px 50px;
-}
-
-.mytable td{
-  padding: 8px 16px 8px 16px;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 12px;
+  padding: 4px 16px 4px 16px;
 }
 
 .mytable tr:hover{
@@ -53,4 +61,27 @@ a{
 .mytable tr:hover td{
   color: rgb(228, 228, 228);
   text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
+}
+
+
+/************** For Mobile Table */
+.mytable-s{
+  margin: 1em auto; /* Align Table within a div to the center */
+  border-collapse: collapse;
+}
+
+.mytable-s th{
+  background-color: rgb(46, 46, 46);
+  padding: 4px 50px 4px 50px;
+  color: rgb(228, 228, 228);
+  text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
+  font-size: 12px;
+}
+
+.mytable-s td{
+  border-bottom: 1px solid rgb(212, 212, 212);
+  color: rgb(27, 27, 27);
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 12px;
+  padding: 4px 16px 4px 16px;
 }

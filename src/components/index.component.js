@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import TableRow from './TableRow';
+import TableRowSmall from './TableRowSmall';
 import Empty from './Empty.component';
 
 import './style-index.css';
@@ -34,6 +35,12 @@ export default class Index extends Component {
     });
   }
 
+  tabRow_s(){
+    return this.state.songList.map(function(object, i){
+        return <TableRowSmall obj={object} key={i} />;
+    });
+  }
+
   render() {
     let message = '';
 
@@ -43,8 +50,9 @@ export default class Index extends Component {
 
     return (
       <div className="tableContainer">
+      <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet"></link>
         <h2> 노래방 데이터</h2>
-          <table className="mytable" style={{ marginTop: 20 }}>
+          <table className="mytable">
             <thead>
               <tr>
                 <th>가수</th>
@@ -60,6 +68,21 @@ export default class Index extends Component {
             </thead>
             <tbody>
               { this.tabRow() }
+            </tbody>
+          </table>
+
+          <table className="mytable-s">
+            <thead>
+              <tr>
+                <th>재목/가수</th>
+                <th>길이</th>
+                <th>TJ번호</th>
+                <th>최고음</th>
+                <th>순</th>
+              </tr>
+            </thead>
+            <tbody>
+              { this.tabRow_s() }
             </tbody>
           </table>
           {message}
