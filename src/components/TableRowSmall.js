@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class TableRow extends Component {
+class TableRowSmall extends Component {
 
   constructor(props) {
         super(props);
@@ -23,7 +23,7 @@ class TableRow extends Component {
     return (
         <tr>
           <td>
-            {this.props.obj.song_name}
+            <b>{this.props.obj.song_name}</b>
             <br/>
             {this.props.obj.artist}
           </td>
@@ -44,4 +44,4 @@ class TableRow extends Component {
   }
 }
 
-export default TableRow;
+export default TableRowSmall;

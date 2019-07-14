@@ -41,7 +41,7 @@ a{
 
 .mytable th{
   background-color: rgb(46, 46, 46);
-  padding: 4px 50px 4px 50px;
+  padding: 4px 10px 4px 10px;
   color: rgb(228, 228, 228);
   text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
 }
@@ -71,11 +71,12 @@ a{
 }
 
 .mytable-s th{
+  padding: 4px 8px 4px 8px;
+  font-family: 'Gothic A1', sans-serif;
   background-color: rgb(46, 46, 46);
-  padding: 4px 50px 4px 50px;
   color: rgb(228, 228, 228);
   text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .mytable-s td{

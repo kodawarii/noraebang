@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
+// Components
 import TableRow from './TableRow';
 import TableRowSmall from './TableRowSmall';
 import Empty from './Empty.component';
+import SortArrow from './SortArrow';
 
+// Stylesheets
 import './style-index.css';
 
 /**
  * @NOTE Current GET method is set to LOCAL Backend server
  *
- * @TODO Mobile: Have Title and Artist only, click on to expand and show more details
+ * [DONE] @TODO Mobile: Have Title and Artist only
+ * @TODO Mobile: Click on item to expand and view more details
  */
 
 export default class Index extends Component {
@@ -50,20 +55,22 @@ export default class Index extends Component {
 
     return (
       <div className="tableContainer">
-      <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet" />
         <h2> 노래방 데이터</h2>
           <table className="mytable">
             <thead>
               <tr>
-                <th>가수</th>
-                <th>재목</th>
-                <th>URL</th>
-                <th>길이</th>
-                <th>키</th>
-                <th>최고음</th>
-                <th>TJ번호</th>
-                <th>KY번호</th>
-                <th>순</th>
+                <th>가수 <SortArrow/></th>
+                <th>재목 <SortArrow/></th>
+                <th>URL <SortArrow/></th>
+                <th>길이 <SortArrow/></th>
+                <th>키 <SortArrow/></th>
+                <th>최고음 <SortArrow/></th>
+                <th>TJ번호 <SortArrow/></th>
+                <th>KY번호 <SortArrow/></th>
+                <th>순 <SortArrow/></th>
               </tr>
             </thead>
             <tbody>
@@ -74,11 +81,11 @@ export default class Index extends Component {
           <table className="mytable-s">
             <thead>
               <tr>
-                <th>재목/가수</th>
-                <th>길이</th>
-                <th>TJ번호</th>
-                <th>최고음</th>
-                <th>순</th>
+                <th>재목/가수 <SortArrow/></th>
+                <th>길이 <SortArrow/></th>
+                <th>TJ번호 <SortArrow/></th>
+                <th>최고음 <SortArrow/></th>
+                <th>순 <SortArrow/></th>
               </tr>
             </thead>
             <tbody>
