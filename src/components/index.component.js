@@ -55,9 +55,6 @@ export default class Index extends Component {
 
     return (
       <div className="tableContainer">
-      <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet"/>
-      <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet" />
         <h2> 노래방 데이터</h2>
           <table className="mytable">
             <thead>

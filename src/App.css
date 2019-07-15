@@ -1,37 +1,40 @@
-h1{
-  font-size: 36px;
+@media only screen and (min-width: 768px) {
+  /* For Desktop: */
+  .navbar-nav{
+    display: block;
+  }
+  .navbar-nav-s{
+    display: none;
+  }
 }
 
-.brand{
-  background-color: rgb(27, 27, 27);
+@media only screen and (max-width: 768px) {
+  /* For Mobile: */
+  .navbar-nav{
+    display: none;
+  }
+  .navbar-nav-s{
+    display: block;
+  }
+  .searchbar{
+    display: none;
+  }
+}
+
+.brandText{
+  padding: 1em 2em 0 2em;
+  float: left;
   color: white;
   text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
-  text-align: center;
-  padding: 8px 0 1px 0;
-  width: 100%;
-  position: fixed;
-}
-
-.brandText:hover{
-  color: rgb(182, 14, 117);
-  text-shadow:1px 1px 10px rgb(255, 255, 255), 1px 1px 10px rgb(194, 9, 111);
 }
 
 .navbar{
   background-color: rgb(27, 27, 27);
   width: 100%;
   position: fixed;
-  top: 80px;
-}
-
-.navbar ul {
+  color: white;
   text-align: center;
-}
-
-.navbar-nav li{
-  display: inline;
-  padding: 0px 28px 0px 28px;
-  text-decoration: none;
+  text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
 
 .navbar a{
@@ -45,10 +48,30 @@ h1{
   text-shadow:1px 1px 10px rgb(255, 255, 255), 1px 1px 10px rgb(255, 255, 255);
 }
 
-.nav-link{
-  font-size: 20px;
+.navbar-nav{
+  float: right;
+}
+
+.navbar-nav-s{
+  float: right;
+}
+
+.navbar ul {
+  text-align: center;
+}
+
+.navbar-nav li{
+  display: inline;
+  padding: 0px 24px 0px 24px;
+  text-decoration: none;
+}
+
+.navbar-nav-s li{
+  display: inline;
+  padding: 0px 12px 0px 12px;
+  text-decoration: none;
 }
 
 .switch-div{
-  padding: 12em 0 10em 0;
+  padding: 8em 0 10em 0;
 }
