@@ -8,12 +8,6 @@ class TableRowSmall extends Component {
         this.delete = this.delete.bind(this);
   }
 
-  delete() {
-    axios.get('http://localhost:4000/song/delete/'+this.props.obj._id)
-      .then(console.log('Deleted'))
-      .catch(err => console.log(err))
-  }
-
   handleClick() {
     //window.location.assign(this.props.obj.URL, '_blank');
     window.open(this.props.obj.URL, '_blank');
