@@ -25,7 +25,7 @@ export default class Index extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:4000/song')
+    axios.get('https://calm-anchorage-40334.herokuapp.com/song')
     .then(response => {
       this.setState({ songList: response.data });
     })
