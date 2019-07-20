@@ -10,13 +10,10 @@ class TableRowSmall extends Component {
   render() {
     return (
         <tr>
-          <td>
+          <td className="songname">
             <b>{this.props.obj.song_name}</b>
             <br/>
             {this.props.obj.artist}
-          </td>
-          <td>
-            {this.props.obj.length}
           </td>
           <td>
             {this.props.obj.tj_number}

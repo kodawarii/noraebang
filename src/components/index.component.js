@@ -25,7 +25,7 @@ export default class Index extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:4000/song') // https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
+    axios.get('https://calm-anchorage-40334.herokuapp.com/song') // https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
     .then(response => {
       this.setState({ songList: response.data });
     })
@@ -79,7 +79,6 @@ export default class Index extends Component {
             <thead>
               <tr>
                 <th>재목/가수 <SortArrow/></th>
-                <th>길이 <SortArrow/></th>
                 <th>TJ번호 <SortArrow/></th>
                 <th>최고음 <SortArrow/></th>
                 <th>순 <SortArrow/></th>

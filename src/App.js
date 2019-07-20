@@ -23,7 +23,7 @@ function App() {
         <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet" />
 
         <nav className="navbar">
-          <span className="brandText">형님 노래방</span>
+          <span className="brandText">노래방DB</span>
           
           <ul className="navbar-nav">
             <li className="nav-item">

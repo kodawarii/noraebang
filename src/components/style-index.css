@@ -71,7 +71,7 @@ a{
 }
 
 .mytable-s th{
-  padding: 4px 8px 4px 8px;
+  padding: 4px 4px 4px 4px;
   font-family: 'Gothic A1', sans-serif;
   background-color: rgb(46, 46, 46);
   color: rgb(228, 228, 228);
@@ -84,5 +84,8 @@ a{
   color: rgb(27, 27, 27);
   font-family: 'Gothic A1', sans-serif;
   font-size: 12px;
-  padding: 4px 16px 4px 16px;
+}
+
+.songname{
+  width: 18em;
 }
