@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 class TableRowSmall extends Component {
-
-  constructor(props) {
-        super(props);
-  }
-
+  
   handleClick() {
     //window.location.assign(this.props.obj.URL, '_blank');
     window.open(this.props.obj.URL, '_blank');

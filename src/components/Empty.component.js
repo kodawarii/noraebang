@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
 
-import './style-home.css';
+import './style-empty.css';
 
 export default class Empty extends Component {
 
   render() {
     return (
-      <div className="home">
-       Database Failed to connect
+      <div>
+        <div className="loading">
+          <div className="obj"></div>
+          <div className="obj"></div>
+          <div className="obj"></div>
+          <div className="obj"></div>
+          <div className="obj"></div>
+          <div className="obj"></div>
+          <div className="obj"></div>
+          <div className="obj"></div>
+        </div>
+        <div className="loading-text">
+          Retrieving Data
+        </div>
       </div>
     );
   }

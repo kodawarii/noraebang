@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 class TableRow extends Component {
 
-  constructor(props) {
-        super(props);
-  }
-
   handleClick() {
     //window.location.assign(this.props.obj.URL, '_blank');
     window.open(this.props.obj.URL, '_blank');
@@ -22,7 +18,7 @@ class TableRow extends Component {
           </td>
           <td>
             <span className="youtubelink">
-              <a href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</a>
+              <span href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</span>
             </span>
           </td>
           <td>
