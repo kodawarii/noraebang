@@ -14,11 +14,9 @@ export default class Empty extends Component {
           <div className="obj"></div>
           <div className="obj"></div>
           <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
         </div>
         <div className="loading-text">
-          Retrieving Data
+          Loading
         </div>
       </div>
     );
