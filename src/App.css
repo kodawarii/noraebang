@@ -73,6 +73,19 @@
   text-decoration: none;
 }
 
+/*
+.nav-padding-space-left{
+  border: 1px solid rgb(27, 27, 27);
+  float: left;
+  width: 300px;
+}
+
+.nav-padding-space-right{
+  float: right;
+  width: 600px;
+}
+*/
+
 .switch-div{
   padding: 6em 0 10em 0;
 }

@@ -23,6 +23,7 @@ function App() {
         <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet" />
 
         <nav className="navbar">
+          <span className="nav-padding-space-left"> </span>
           <span className="brandText">노래방DB</span>
           
           <ul className="navbar-nav">
@@ -35,6 +36,7 @@ function App() {
             <li className="nav-item">
               <Link to={'/about'} className="nav-link">About</Link>
             </li>
+            <li className="nav-padding-space-right"> </li>
           </ul>
 
           
