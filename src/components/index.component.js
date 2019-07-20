@@ -15,6 +15,11 @@ import './style-index.css';
  *
  * [DONE] @TODO Mobile: Have Title and Artist only
  * @TODO Mobile: Click on item to expand and view more details
+ * [DONE] @TODO Mobile: Table Header obstructed texts
+ * [DONE] @TODO Loading page splash animation
+ * @TODO Top Nav left and right padding for A4 document feel
+ * @TODO Table headers to stay at top of page when scrolled past down it
+ * @TODO Nav 'Selected' bottom-border styling
  */
 
 export default class Index extends Component {
