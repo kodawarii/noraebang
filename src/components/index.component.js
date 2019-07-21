@@ -11,8 +11,7 @@ import SortArrow from './SortArrow';
 import './style-index.css';
 
 /**
- * @NOTE Current GET method is set to LOCAL Backend server
- *
+ * 
  * [DONE] @TODO Mobile: Have Title and Artist only
  * @TODO Mobile: Click on item to expand and view more details
  * [DONE] @TODO Mobile: Table Header obstructed texts
@@ -21,6 +20,8 @@ import './style-index.css';
  * @TODO Table headers to stay at top of page when scrolled past down it
  * @TODO Nav 'Selected' bottom-border styling
  * @TODO Prod Page shows empty page when going to '/' page
+ * @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
+ * 
  */
 
 export default class Index extends Component {
