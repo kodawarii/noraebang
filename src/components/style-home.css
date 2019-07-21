@@ -1,9 +1,39 @@
-.home{
-    text-align: center;
+
+@media only screen and (min-width: 768px) {
+    /* For Desktop: */
+    .home{
+        text-align: center;
+        transform: translateY(50%);
+    }
+}
+  
+  
+@media only screen and (max-width: 768px) {
+    /* For Mobile: */
+    .home{
+        text-align: center;
+        transform: translateY(20%);
+        padding: 8px;
+    }
+}
+
+.homeInner{
+    border: 2px solid black;
 }
 
 .homeTextBody{
     color: rgb(27, 27, 27);
+}
+
+.contactIcons li{
+    display: inline;
+    padding: 12px;
+    font-size: 40px;
+    color: rgb(167, 212, 255);
+}
+
+.contactIcons li:hover{
+    color: rgb(156, 5, 76);
 }
 
 .mongo{

@@ -18,6 +18,10 @@ import Home from './home.component';
  * @TODO Prod Page shows empty page when going to '/' page
  * @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
  * 
+ * @PBI Change content of home and about pages for prod
+ * @PBI
+ * @PBI
+ * 
  */
 
 class InnerApp extends Component {
