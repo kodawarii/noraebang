@@ -10,20 +10,6 @@ import SortArrow from './SortArrow';
 // Stylesheets
 import './style-index.css';
 
-/**
- * 
- * [DONE] @TODO Mobile: Have Title and Artist only
- * @TODO Mobile: Click on item to expand and view more details
- * [DONE] @TODO Mobile: Table Header obstructed texts
- * [DONE] @TODO Loading page splash animation
- * [Not-required] @TODO Top Nav left and right padding for A4 document feel
- * @TODO Table headers to stay at top of page when scrolled past down it
- * [DONE] @TODO Nav 'Selected' bottom-border styling
- * @TODO Prod Page shows empty page when going to '/' page
- * @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
- * 
- */
-
 export default class Index extends Component {
 
   constructor(props) {
