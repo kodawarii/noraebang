@@ -35,13 +35,11 @@
   position: fixed;
   color: white;
   text-align: center;
-  text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
 
 .navbar a{
   text-decoration: none;
   color: rgb(255, 255, 255);
-  text-shadow:1px 1px 5px rgb(255, 99, 172), 1px 1px 5px rgb(255, 255, 255);
 }
 
 .navbar a:hover{
@@ -64,13 +62,17 @@
 .navbar-nav li{
   display: inline;
   padding: 0px 24px 0px 24px;
-  text-decoration: none;
 }
 
 .navbar-nav-s li{
   display: inline;
   padding: 0px 12px 0px 12px;
-  text-decoration: none;
+}
+
+.nav-selected{
+  padding-bottom: 13px;
+  border-bottom: 4px solid rgb(180, 215, 255);
+  text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
 
 /*

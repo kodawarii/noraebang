@@ -8,6 +8,39 @@ import Home from './home.component';
 
 class InnerApp extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      onHome: true,
+      onIndex: false,
+      onAbout: false
+    }
+  }
+
+  toggleHome(){
+    this.setState({
+      onHome: true,
+      onIndex: false,
+      onAbout: false
+    });
+  }
+
+  toggleIndex(){
+    this.setState({
+      onHome: false,
+      onIndex: true,
+      onAbout: false
+    });
+  }
+
+  toggleAbout(){
+    this.setState({
+      onHome: false,
+      onIndex: false,
+      onAbout: true
+    });
+  }
+
   render() {
     return (
       <Router>
@@ -23,15 +56,16 @@ class InnerApp extends Component {
             <span className="nav-padding-space-left"> </span>
             <span className="brandText">노래방DB</span>
             
+
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to={'/'} className="nav-link">Home</Link>
+              <li className="nav-item ">
+                <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/index'} className="nav-link">Data</Link>
+                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Data</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/about'} className="nav-link">About</Link>
+                <Link to={'/about'} className={"nav-link " + (this.state.onAbout ? "nav-selected " : "")} onClick={this.toggleAbout.bind(this)}>About</Link>
               </li>
               <li className="nav-padding-space-right"> </li>
             </ul>
@@ -39,17 +73,19 @@ class InnerApp extends Component {
             
             <ul className="navbar-nav-s">
               <li className="nav-item">
-                <Link to={'/'} className="nav-link">Home</Link>
+                <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/index'} className="nav-link">Data</Link>
+                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Data</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/about'} className="nav-link">About</Link>
+                <Link to={'/about'} className={"nav-link " + (this.state.onAbout ? "nav-selected " : "")} onClick={this.toggleAbout.bind(this)}>About</Link>
               </li>
             </ul>
           </nav>
           </header>
+
+
           <div className="switch-div">
             <Switch>
               <Route exact path='/' component={ Home } />
