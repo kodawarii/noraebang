@@ -22,6 +22,8 @@ import Home from './home.component';
  * [Not-required] @PBI Change content of home and about pages for prod
  * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
  * @PBI change 'About' to 'Blog' on updates and major releases
+ * @PBI Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
+ * @PBI Search bar for searching ANY data from table
  * 
  */
 
