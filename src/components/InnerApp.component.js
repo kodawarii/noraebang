@@ -24,6 +24,7 @@ import Home from './home.component';
  * @PBI change 'About' to 'Blog' on updates and major releases
  * @PBI Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
  * @PBI Search bar for searching ANY data from table
+ * @PBI change mobile nav to hamburger (since blog link added now there is no real estate)
  * 
  */
 
