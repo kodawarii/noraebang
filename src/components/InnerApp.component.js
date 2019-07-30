@@ -7,6 +7,7 @@ import About from './about.component';
 import Home from './home.component'; 
 
 /**
+ * "Because Karaoke was too damn expensive, decided to buy my own equipment and make my own app"
  * 
  * [DONE] @TODO Mobile: Have Title and Artist only
  * @TODO Mobile: Click on item to expand and view more details
@@ -19,8 +20,8 @@ import Home from './home.component';
  * @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
  * 
  * @PBI Change content of home and about pages for prod
- * @PBI
- * @PBI
+ * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
+ * @PBI change 'About' to 'Blog' on updates and major releases
  * 
  */
 

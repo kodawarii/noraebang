@@ -17,16 +17,212 @@ export default class Index extends Component {
     this.state = {songList: []};
   }
 
+  //// API Links:
+  //// https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
   componentDidMount(){
-    axios.get('https://calm-anchorage-40334.herokuapp.com/song') // https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
+    axios.get('http://localhost:4000/song/')
     .then(response => {
       this.setState({ songList: response.data });
     })
     .catch(function (error) {
       console.log(error);
-    })
+    });
   }
 
+  //// SORTING ////
+  handleSortArtist(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/artist_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }    
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/artist_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortTitle(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/song_name_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/song_name_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortLength(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/length_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/length_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortKey(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/key_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/key_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortHighestNote(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/max_key_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/max_key_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortTJ(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/tj_number_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/tj_number_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortKY(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/ky_number_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/ky_number_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  handleSortOrder(order){
+    if(order === "asc"){
+      axios.get('http://localhost:4000/song/order_sort_asc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else if(order === "desc"){
+      axios.get('http://localhost:4000/song/order_sort_desc/')
+      .then(response => {
+        this.setState({ songList: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      console.log("");
+    }
+  }
+
+  //// Getting Table Rows ////
   tabRow(){
     return this.state.songList.map(function(object, i){
         return <TableRow obj={object} key={i} />;
@@ -52,15 +248,15 @@ export default class Index extends Component {
           <table className="mytable">
             <thead>
               <tr>
-                <th>가수 <SortArrow/></th>
-                <th>재목 <SortArrow/></th>
-                <th>URL <SortArrow/></th>
-                <th>길이 <SortArrow/></th>
-                <th>키 <SortArrow/></th>
-                <th>최고음 <SortArrow/></th>
-                <th>TJ번호 <SortArrow/></th>
-                <th>KY번호 <SortArrow/></th>
-                <th>순 <SortArrow/></th>
+                <th> 가수 <SortArrow clickButton={this.handleSortArtist.bind(this)}/></th>
+                <th> 재목 <SortArrow clickButton={this.handleSortTitle.bind(this)}/></th>
+                <th> URL </th>
+                <th> 길이 <SortArrow clickButton={this.handleSortLength.bind(this)}/></th>
+                <th> 키 <SortArrow clickButton={this.handleSortKey.bind(this)}/></th>
+                <th> 최고음 <SortArrow clickButton={this.handleSortHighestNote.bind(this)}/></th>
+                <th> TJ번호 <SortArrow clickButton={this.handleSortTJ.bind(this)}/></th>
+                <th> KY번호 <SortArrow clickButton={this.handleSortKY.bind(this)}/></th>
+                <th> 순 <SortArrow clickButton={this.handleSortOrder.bind(this)}/></th>
               </tr>
             </thead>
             <tbody>
@@ -71,10 +267,10 @@ export default class Index extends Component {
           <table className="mytable-s">
             <thead>
               <tr>
-                <th>재목/가수 <SortArrow/></th>
-                <th>TJ번호 <SortArrow/></th>
-                <th>최고음 <SortArrow/></th>
-                <th>순 <SortArrow/></th>
+                <th> 재목/가수 <SortArrow clickButton={this.handleSortTitle.bind(this)}/></th>
+                <th> TJ번호 <SortArrow clickButton={this.handleSortTJ.bind(this)}/></th>
+                <th> 최고음 <SortArrow clickButton={this.handleSortHighestNote.bind(this)}/></th>
+                <th> 순 <SortArrow clickButton={this.handleSortOrder.bind(this)}/></th>
               </tr>
             </thead>
             <tbody>
