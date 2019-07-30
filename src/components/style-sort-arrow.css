@@ -3,3 +3,8 @@ span{
     color: rgb(150, 150, 150);
     text-shadow: none;
 }
+
+span:hover{
+    color: white;
+    cursor: default;
+}

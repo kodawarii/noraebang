@@ -17,9 +17,9 @@ import Home from './home.component';
  * @TODO Table headers to stay at top of page when scrolled past down it
  * [DONE] @TODO Nav 'Selected' bottom-border styling
  * @TODO Prod Page shows empty page when going to '/' page
- * @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
+ * [DONE-2019/07/30] @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
  * 
- * @PBI Change content of home and about pages for prod
+ * [Not-required] @PBI Change content of home and about pages for prod
  * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
  * @PBI change 'About' to 'Blog' on updates and major releases
  * 

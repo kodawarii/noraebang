@@ -23,9 +23,9 @@ class SortArrow extends Component {
 
   render() {
     return (
-       <button onClick={this.handleBtnClick.bind(this)}>
+       <span onClick={this.handleBtnClick.bind(this)}>
         &#x2195;
-       </button>
+       </span>
     );
   }
 }
