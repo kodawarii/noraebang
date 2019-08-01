@@ -27,6 +27,7 @@ import Home from './home.component';
  * @PBI Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
  * @PBI Search bar for searching ANY data from table
  * @PBI change mobile nav to hamburger (since blog link added now there is no real estate)
+ * @PBI Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 
  * 
  */
 
