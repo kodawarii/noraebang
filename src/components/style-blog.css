@@ -1,19 +1,16 @@
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
-    .blog{
-        text-align: center;
-        transform: translateY(120%);
-    }
+    
 }
   
   
 @media only screen and (max-width: 768px) {
     /* For Mobile: */
-    .blog{
-        text-align: center;
-        transform: translateY(20%);
-        padding: 8px;
-    }
+    
+}
+
+.blog{
+    text-align: center;
 }
 
 .blogTextBody{

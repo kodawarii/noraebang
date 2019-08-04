@@ -24,13 +24,14 @@ export default class Home extends Component {
     return (
       <div className="home">
        <div className="homeTextBody">
-        <h1> Welcome to 노래방DB </h1>
-        <h3> Developed with </h3>
-          <span className="mongo"> MongoDB</span> 
-          <span className="express"> Express</span> 
-          <span className="react"> React</span> 
-          <span className="node"> Node</span> 
-        <h3> A Simple website created to display organise and manage music for TJ and KY</h3>
+       <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet"/>
+        <p className="mainHeading"> Welcome to NoraebangDB </p>
+        <p className="regularTextBlock"> Developed with </p>
+          <span className="mongo tech"> MongoDB</span> 
+          <span className="express tech"> Express</span> 
+          <span className="react tech"> React</span> 
+          <span className="node tech"> Node</span> 
+        <p className="regularTextBlock"> A website created to display organise and manage music data for TJ and KY</p>
        </div>
        <br/><br/>
        <div className="contactIcons">

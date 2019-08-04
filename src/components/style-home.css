@@ -37,9 +37,20 @@
     }
 
     .homeTextBody{
-        padding-top: 100px;
+        padding: 50px 20px 0px 20px;
         color: white;
     }
+}
+
+.mainHeading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+}
+
+.regularTextBlock{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .homeInner{
@@ -50,11 +61,23 @@
     display: inline;
     padding: 12px;
     font-size: 40px;
-    color: rgb(167, 212, 255);
+    color: rgb(255, 255, 255);
 }
 
 .contactIcons li:hover{
     color: rgb(156, 5, 76);
+}
+
+.tech{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 12px;
+    padding-left: 4px;
+}
+
+.tech:hover{
+    color: white;
+    text-shadow: 1px 1px 10px rgb(116, 116, 116), 1px 1px 10px rgb(139, 139, 139);
 }
 
 .mongo{
