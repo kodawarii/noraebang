@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
-    .about{
+    .blog{
         text-align: center;
         transform: translateY(120%);
     }
@@ -9,13 +9,13 @@
   
 @media only screen and (max-width: 768px) {
     /* For Mobile: */
-    .about{
+    .blog{
         text-align: center;
         transform: translateY(20%);
         padding: 8px;
     }
 }
 
-.aboutTextBody{
+.blogTextBody{
     color: rgb(27, 27, 27);
 }

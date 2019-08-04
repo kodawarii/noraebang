@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import './style-about.css';
+import './style-blog.css';
 
-export default class About extends Component {
+export default class Blog extends Component {
 
   render() {
     return (
-      <div className="about">
+      <div className="blog">
         <h1>What is this?</h1>
-        <div className="aboutTextBody">
+        <div className="blogTextBody">
           <h3> 
             An easy to access, easy to read collection of data for all the music I like to destroy my throat with at the K
           </h3>

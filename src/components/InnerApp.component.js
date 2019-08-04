@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Index from './index.component'; 
-import About from './about.component'; 
+import Blog from './blog.component'; 
 import Home from './home.component'; 
 
 /**
@@ -39,7 +39,7 @@ class InnerApp extends Component {
     this.state = {
       onHome: true,
       onIndex: false,
-      onAbout: false,
+      onBlog: false,
     }
   }
 
@@ -47,7 +47,7 @@ class InnerApp extends Component {
     this.setState({
       onHome: true,
       onIndex: false,
-      onAbout: false
+      onBlog: false
     });
   }
 
@@ -55,15 +55,15 @@ class InnerApp extends Component {
     this.setState({
       onHome: false,
       onIndex: true,
-      onAbout: false
+      onBlog: false
     });
   }
 
-  toggleAbout(){
+  toggleBlog(){
     this.setState({
       onHome: false,
       onIndex: false,
-      onAbout: true
+      onBlog: true
     });
   }
 
@@ -91,7 +91,7 @@ class InnerApp extends Component {
                 <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Data</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/about'} className={"nav-link " + (this.state.onAbout ? "nav-selected " : "")} onClick={this.toggleAbout.bind(this)}>About</Link>
+                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>About</Link>
               </li>
               <li className="nav-padding-space-right"> </li>
             </ul>
@@ -105,7 +105,7 @@ class InnerApp extends Component {
                 <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Data</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/about'} className={"nav-link " + (this.state.onAbout ? "nav-selected " : "")} onClick={this.toggleAbout.bind(this)}>About</Link>
+                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>About</Link>
               </li>
             </ul>
           </nav>
@@ -116,7 +116,7 @@ class InnerApp extends Component {
             <Switch>
               <Route exact path='/' component={ Home } />
               <Route exact path='/index' component={ Index } />
-              <Route path='/about' component={ About } />
+              <Route path='/blog' component={ Blog } />
             </Switch>
           </div>
         </div>
