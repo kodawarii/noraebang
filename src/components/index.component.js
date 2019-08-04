@@ -14,13 +14,18 @@ export default class Index extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {songList: []};
+
+    //// API Links:
+    //// https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
+    this.state = {
+      songList: [],
+      baseURL: 'http://localhost:4000/song'
+    };
   }
 
-  //// API Links:
-  //// https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
+  //// GET Default List
   componentDidMount(){
-    axios.get('http://localhost:4000/song/')
+    axios.get(this.state.baseURL+'/')
     .then(response => {
       this.setState({ songList: response.data });
     })
@@ -32,7 +37,7 @@ export default class Index extends Component {
   //// SORTING ////
   handleSortArtist(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/artist_sort_asc/')
+      axios.get(this.state.baseURL+'/artist_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -41,7 +46,7 @@ export default class Index extends Component {
       });
     }    
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/artist_sort_desc/')
+      axios.get(this.state.baseURL+'/artist_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -56,7 +61,7 @@ export default class Index extends Component {
 
   handleSortTitle(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/song_name_sort_asc/')
+      axios.get(this.state.baseURL+'/song_name_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -65,7 +70,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/song_name_sort_desc/')
+      axios.get(this.state.baseURL+'/song_name_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -80,7 +85,7 @@ export default class Index extends Component {
 
   handleSortLength(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/length_sort_asc/')
+      axios.get(this.state.baseURL+'/length_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -89,7 +94,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/length_sort_desc/')
+      axios.get(this.state.baseURL+'/length_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -104,7 +109,7 @@ export default class Index extends Component {
 
   handleSortKey(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/key_sort_asc/')
+      axios.get(this.state.baseURL+'/key_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -113,7 +118,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/key_sort_desc/')
+      axios.get(this.state.baseURL+'/key_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -128,7 +133,7 @@ export default class Index extends Component {
 
   handleSortHighestNote(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/max_key_sort_asc/')
+      axios.get(this.state.baseURL+'/max_key_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -137,7 +142,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/max_key_sort_desc/')
+      axios.get(this.state.baseURL+'/max_key_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -152,7 +157,7 @@ export default class Index extends Component {
 
   handleSortTJ(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/tj_number_sort_asc/')
+      axios.get(this.state.baseURL+'/tj_number_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -161,7 +166,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/tj_number_sort_desc/')
+      axios.get(this.state.baseURL+'/tj_number_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -176,7 +181,7 @@ export default class Index extends Component {
 
   handleSortKY(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/ky_number_sort_asc/')
+      axios.get(this.state.baseURL+'/ky_number_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -185,7 +190,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/ky_number_sort_desc/')
+      axios.get(this.state.baseURL+'/ky_number_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -200,7 +205,7 @@ export default class Index extends Component {
 
   handleSortOrder(order){
     if(order === "asc"){
-      axios.get('http://localhost:4000/song/order_sort_asc/')
+      axios.get(this.state.baseURL+'/order_sort_asc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
@@ -209,7 +214,7 @@ export default class Index extends Component {
       });
     }
     else if(order === "desc"){
-      axios.get('http://localhost:4000/song/order_sort_desc/')
+      axios.get(this.state.baseURL+'/order_sort_desc/')
       .then(response => {
         this.setState({ songList: response.data });
       })
