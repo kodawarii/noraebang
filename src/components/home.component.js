@@ -23,9 +23,9 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
-       <h1> Welcome to 노래방DB </h1>
        <div className="homeTextBody">
-        <h3> Made with </h3>
+        <h1> Welcome to 노래방DB </h1>
+        <h3> Developed with </h3>
           <span className="mongo"> MongoDB</span> 
           <span className="express"> Express</span> 
           <span className="react"> React</span> 

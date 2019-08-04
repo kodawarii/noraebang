@@ -82,7 +82,7 @@ class InnerApp extends Component {
             <span className="nav-padding-space-left"> </span>
             <span className="brandText">노래방DB</span>
             
-
+            
             <ul className="navbar-nav">
               <li className="nav-item ">
                 <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>

@@ -5,7 +5,7 @@ import InnerApp from './components/InnerApp.component';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <InnerApp/ >
     </div>
   );
