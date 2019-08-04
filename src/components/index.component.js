@@ -19,7 +19,7 @@ export default class Index extends Component {
     //// https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
     this.state = {
       songList: [],
-      baseURL: 'http://localhost:4000/song'
+      baseURL: 'https://calm-anchorage-40334.herokuapp.com/song'
     };
   }
 
