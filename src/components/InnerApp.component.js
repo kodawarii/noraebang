@@ -22,6 +22,7 @@ import Home from './home.component';
  * @TODO If Youtube link doesnt exist, dont show button for URL link
  * @TODO Add M/F for Key tab
  * [Properly-DONE-2019/08/06] @TODOCritical Add Hash Routes for gh-pages routing to work properly AND to use public assets properly without using kodawarii.github.com/index repo as storage
+ * [DONE-2019/08/06] @TODO Change onROUTE states so that on refresh, nav blue bars are on correct nav item
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
  * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
@@ -42,6 +43,56 @@ class InnerApp extends Component {
       onIndex: false,
       onBlog: false
     }
+  }
+
+  componentDidMount(){
+
+    /**
+     * 2019/08/06:
+     * Current: Go to Index page, then refresh the application. Because of routing, the blue nav bar will be on home
+     * Fix: On refresh, when the component mounts, check which route we are in, and underline the proper nav with blue line
+     */
+    let URL = window.location.href;
+    let startIndex;
+    for(var i = 0; i < URL.length; i++){
+      if(URL.charAt(i) === '#'){
+        startIndex = i + 2;
+      }
+    }
+    
+    let onPage = URL.slice(startIndex, URL.length);
+    
+    switch(onPage){
+      case "home":
+        this.setState({
+          onHome: true,
+          onIndex: false,
+          onBlog: false
+        });
+        break;
+      case "index":
+        this.setState({
+          onHome: false,
+          onIndex: true,
+          onBlog: false
+        });
+        break;
+      case "blog":
+        this.setState({
+          onHome: false,
+          onIndex: false,
+          onBlog: true
+        });
+        break;
+      default:
+        break;
+    }
+    /**
+     * End of Blue Nav Routing fix
+     */
+
+     // Do something else ...
+     // ...
   }
 
   toggleHome(){
@@ -74,10 +125,8 @@ class InnerApp extends Component {
         <div className="App">
           <header className="App-header">
           <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"></link>
 
           <nav className="navbar">
             <span className="nav-padding-space-left"> </span>
@@ -89,10 +138,10 @@ class InnerApp extends Component {
                 <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Data</Link>
+                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>About</Link>
+                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
               </li>
               <li className="nav-padding-space-right"> </li>
             </ul>
@@ -103,10 +152,10 @@ class InnerApp extends Component {
                 <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Data</Link>
+                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>About</Link>
+                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
               </li>
             </ul>
           </nav>

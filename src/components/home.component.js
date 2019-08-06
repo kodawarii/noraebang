@@ -24,7 +24,6 @@ export default class Home extends Component {
     return (
       <div className="home">
        <div className="homeTextBody">
-       <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet"/>
         <p className="mainHeading"> Welcome to NoraebangDB </p>
         <p className="regularTextBlock"> Developed with </p>
           <span className="mongo tech"> MongoDB</span> 
