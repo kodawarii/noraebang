@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 
 import Index from './index.component'; 
 import Blog from './Blog.component'; 
@@ -21,7 +21,7 @@ import Home from './home.component';
  * @TODO Change React App Logo and Titles for ALL apps
  * @TODO If Youtube link doesnt exist, dont show button for URL link
  * @TODO Add M/F for Key tab
- * @TODOCritical Add Hash Routes for gh-pages routing to work properly
+ * [Properly-DONE-2019/08/06] @TODOCritical Add Hash Routes for gh-pages routing to work properly AND to use public assets properly without using kodawarii.github.com/index repo as storage
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
  * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
@@ -40,7 +40,7 @@ class InnerApp extends Component {
     this.state = {
       onHome: true,
       onIndex: false,
-      onBlog: false,
+      onBlog: false
     }
   }
 
@@ -70,7 +70,7 @@ class InnerApp extends Component {
 
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div className="App">
           <header className="App-header">
           <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet"/>
@@ -121,7 +121,7 @@ class InnerApp extends Component {
             </Switch>
           </div>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }

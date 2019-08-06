@@ -8,7 +8,7 @@ import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
     <div>
-        <HashRouter basename='/'>
+        <HashRouter basename='/home'>
             <App />
         </HashRouter>
         <footer> Created by Eunbal/Talmo Developments 2019 &#169; </footer>
