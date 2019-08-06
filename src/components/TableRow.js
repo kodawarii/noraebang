@@ -8,6 +8,16 @@ class TableRow extends Component {
   } 
 
   render() {
+
+    let youtube;
+
+    if(this.props.obj.URL !== ""){
+      youtube = 
+      <span className="youtubelink">
+      <span href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</span>
+      </span>
+    }
+
     return (
         <tr>
           <td>
@@ -17,9 +27,7 @@ class TableRow extends Component {
             {this.props.obj.song_name}
           </td>
           <td>
-            <span className="youtubelink">
-              <span href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</span>
-            </span>
+            {youtube}
           </td>
           <td>
             {this.props.obj.length}
