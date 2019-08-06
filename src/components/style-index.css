@@ -44,6 +44,7 @@ a{
   padding: 4px 10px 4px 10px;
   color: rgb(228, 228, 228);
   text-shadow:1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
+  font-size: 12px;
 }
 
 .mytable td{
