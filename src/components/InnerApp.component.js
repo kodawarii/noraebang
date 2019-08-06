@@ -21,6 +21,7 @@ import Home from './home.component';
  * @TODO Change React App Logo and Titles for ALL apps
  * @TODO If Youtube link doesnt exist, dont show button for URL link
  * @TODO Add M/F for Key tab
+ * @TODOCritical Add Hash Routes for gh-pages routing to work properly
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
  * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
