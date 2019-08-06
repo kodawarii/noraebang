@@ -20,16 +20,16 @@ import Home from './home.component';
  * [DONE-2019/07/30] @TODO Sorting - There are so many different ways to do this lol - Arrows/Dropdown selection (Execute in front end/back end, store in db or store in component states) etc
  * @TODO Change React App Logo and Titles for ALL apps
  * [DONE-2019/08/06]@TODO If Youtube link doesnt exist, dont show button for URL link
- * @TODO Add M/F for Key tab
+ * [Not-required] @TODO Add M/F for Key tab
  * [Properly-DONE-2019/08/06] @TODOCritical Add Hash Routes for gh-pages routing to work properly AND to use public assets properly without using kodawarii.github.com/index repo as storage
  * [DONE-2019/08/06] @TODO Change onROUTE states so that on refresh, nav blue bars are on correct nav item
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
- * @PBI Convert to Karaoke App just straight up? with youtube playlist API and video embedded
- * @PBI change 'About' to 'Blog' on updates and major releases
+ * @PBI Add Karaoke App -- with youtube playlist API and video embedded
+ * [in-progress] @PBI Add Blog App
  * @PBI Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
  * @PBI Search bar for searching ANY data from table
- * @PBI change mobile nav to hamburger (since blog link added now there is no real estate)
+ * @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
  * @PBI Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 
  * 
  */
