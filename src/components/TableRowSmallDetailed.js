@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TableRowSmall extends Component {
+class TableRowSmallDetailed extends Component {
 
   render() {
     return (
@@ -24,4 +24,4 @@ class TableRowSmall extends Component {
   }
 }
 
-export default TableRowSmall;
+export default TableRowSmallDetailed;

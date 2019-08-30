@@ -10,7 +10,7 @@ import Home from './home.component';
  * "Because Karaoke was too damn expensive, decided to buy my own equipment and make my own app"
  * 
  * [DONE] @TODO Mobile: Have Title and Artist only
- * @TODO Mobile: Click on item to expand and view more details
+ * [in-progress-2019/08/30] @TODO Mobile: Click on item to expand and view more details
  * [DONE] @TODO Mobile: Table Header obstructed texts
  * [DONE] @TODO Loading page splash animation
  * [Not-required] @TODO Top Nav left and right padding for A4 document feel
@@ -25,12 +25,12 @@ import Home from './home.component';
  * [DONE-2019/08/06] @TODO Change onROUTE states so that on refresh, nav blue bars are on correct nav item
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
- * @PBI Add Karaoke App -- with youtube playlist API and video embedded
+ * @PBI FEAT001 - Add Karaoke App -- with youtube playlist API and video embedded
  * [in-progress] @PBI Add Blog App
- * @PBI Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
+ * @PBI FEAT002 - Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
  * @PBI Search bar for searching ANY data from table
  * @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
- * @PBI Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 
+ * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 
  * 
  */
 

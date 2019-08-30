@@ -4,6 +4,7 @@ import axios from 'axios';
 // Components
 import TableRow from './TableRow';
 import TableRowSmall from './TableRowSmall';
+import TableRowSmallDetailed from './TableRowSmallDetailed';
 import Empty from './Empty.component';
 import SortArrow from './SortArrow';
 
@@ -19,7 +20,8 @@ export default class Index extends Component {
     //// https://calm-anchorage-40334.herokuapp.com/song or http://localhost:4000/song
     this.state = {
       songList: [],
-      baseURL: 'https://calm-anchorage-40334.herokuapp.com/song' 
+      baseURL: 'https://calm-anchorage-40334.herokuapp.com/song',
+      mobileDetail: true
     };
   }
 
@@ -227,6 +229,19 @@ export default class Index extends Component {
     }
   }
 
+  //// Showing Details for Mobile View when clicked on <tr> row
+  showDetailsForMobileClick(){
+
+    console.log("showing details");
+
+    if(this.state.mobileDetail){
+      this.setState({mobileDetails: false});  
+    }
+    else{
+      this.setState({mobileDetails: true});
+    }
+  }
+
   //// Getting Table Rows ////
   tabRow(){
     return this.state.songList.map(function(object, i){
@@ -235,8 +250,16 @@ export default class Index extends Component {
   }
 
   tabRow_s(){
+    let somefunction = this.showDetailsForMobileClick.bind(this);
     return this.state.songList.map(function(object, i){
-        return <TableRowSmall obj={object} key={i} />;
+        return <TableRowSmall obj={object} key={i} showDetails={somefunction} />; // cant call this.showDetailsForMobileClick.bind(this) here because we're in different context
+    });
+  }
+
+  tabRow_s_detailed(){
+    let somefunction = this.showDetailsForMobileClick.bind(this);
+    return this.state.songList.map(function(object, i){
+        return <TableRowSmallDetailed obj={object} key={i} showDetails={somefunction} />; // cant call this.showDetailsForMobileClick.bind(this) here because we're in different context
     });
   }
 
@@ -245,6 +268,14 @@ export default class Index extends Component {
 
     if(this.state.songList.length === 0){
       message =  <Empty/>
+    }
+
+    let showMobile;
+    if(this.state.mobileDetail){
+      showMobile = this.tabRow_s_detailed();
+    }
+    else{
+      showMobile = this.tabRow_s();
     }
 
     return (
@@ -279,7 +310,7 @@ export default class Index extends Component {
               </tr>
             </thead>
             <tbody>
-              { this.tabRow_s() }
+              { showMobile }
             </tbody>
           </table>
           {message}
