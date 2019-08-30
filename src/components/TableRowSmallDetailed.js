@@ -9,6 +9,8 @@ class TableRowSmallDetailed extends Component {
             <b>{this.props.obj.song_name}</b>
             <br/>
             {this.props.obj.artist}
+            <br/>
+            Extra Details
           </td>
           <td>
             {this.props.obj.tj_number}
