@@ -1,5 +1,5 @@
  * [DONE] @TODO Mobile: Have Title and Artist only
- * [in-progress-2019/08/30] @TODO Mobile: Click on item to expand and view more details
+ * [DONE-2019/09/02] @TODO Mobile: Click on item to expand and view more details
  * [DONE] @TODO Mobile: Table Header obstructed texts
  * [DONE] @TODO Loading page splash animation
  * [Not-required] @TODO Top Nav left and right padding for A4 document feel
