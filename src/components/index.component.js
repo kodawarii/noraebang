@@ -21,8 +21,8 @@ export default class Index extends Component {
     this.state = {
       songList: [],
       baseURL: 'https://calm-anchorage-40334.herokuapp.com/song',
-      mobileDetailArtist: "nothing as of yet",
-      mobileDetailSongName: "nothing as of yet"
+      mobileDetailArtist: "nothing as of yet 1",
+      mobileDetailSongName: "nothing as of yet 2"
     };
   }
 
@@ -233,7 +233,16 @@ export default class Index extends Component {
   //// Showing Details for Mobile View when clicked on <tr> row
   triggerDetails(artist, song_name){
 
-    console.log("showing details");
+    console.log("toggling details (hide/show) for " + artist + " " + song_name);
+
+    if(this.state.mobileDetailArtist === artist && this.state.mobileDetailSongName === song_name){
+      this.setState({mobileDetailArtist: "resetting artist"});
+      this.setState({mobileDetailSongName: "resetting Song Name"});
+    }
+    else{
+      this.setState({mobileDetailArtist: artist});
+      this.setState({mobileDetailArtist: song_name});
+    }
   }
 
   //// Getting Table Rows ////
@@ -247,13 +256,13 @@ export default class Index extends Component {
     let somefunction = this.triggerDetails.bind(this);
     let artist = this.state.mobileDetailArtist;
     let songName = this.state.mobileDetailSongName;
-    console.log(artist);
+    console.log(songName);
     return this.state.songList.map(function(object, i){ // Care with this keyword context within return function
       if(object.artist === artist && object.song_name === songName){
-        return <TableRowSmallDetailed obj={object} key={i} triggerDetails={somefunction(object.artist, object.song_name)} />;
+        return <TableRowSmallDetailed obj={object} key={i} triggerDetails={somefunction.bind(this, object.artist, object.song_name)} />;
       }
       else{
-        return <TableRowSmall obj={object} key={i} triggerDetails={somefunction(object.artist, object.song_name)} />;
+        return <TableRowSmall obj={object} key={i} triggerDetails={somefunction.bind(this, object.artist, object.song_name)} />;
       }
     });
   }
