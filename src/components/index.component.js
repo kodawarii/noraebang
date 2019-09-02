@@ -238,10 +238,18 @@ export default class Index extends Component {
     if(this.state.mobileDetailArtist === artist && this.state.mobileDetailSongName === song_name){
       this.setState({mobileDetailArtist: "resetting artist"});
       this.setState({mobileDetailSongName: "resetting Song Name"});
+      console.log("Should be resetting this.state values");
     }
     else{
       this.setState({mobileDetailArtist: artist});
-      this.setState({mobileDetailArtist: song_name});
+      this.setState({mobileDetailSongName: song_name});
+      this.state.mobileDetailArtist = artist;
+      this.state.mobileDetailSongName = song_name;
+      console.log("Should be updating to new values in this.state and details shown");
+      console.log(">");
+      console.log(this.state.mobileDetailArtist);
+      console.log(this.state.mobileDetailSongName);
+      console.log(">");
     }
   }
 
@@ -256,8 +264,11 @@ export default class Index extends Component {
     let somefunction = this.triggerDetails.bind(this);
     let artist = this.state.mobileDetailArtist;
     let songName = this.state.mobileDetailSongName;
-    console.log(songName);
+
+    console.log("this.state value: <printing in tabRow_s>: " + songName);
+
     return this.state.songList.map(function(object, i){ // Care with this keyword context within return function
+      console.log(object.artist + " === " + artist);
       if(object.artist === artist && object.song_name === songName){
         return <TableRowSmallDetailed obj={object} key={i} triggerDetails={somefunction.bind(this, object.artist, object.song_name)} />;
       }
