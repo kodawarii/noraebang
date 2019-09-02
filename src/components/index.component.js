@@ -21,7 +21,8 @@ export default class Index extends Component {
     this.state = {
       songList: [],
       baseURL: 'https://calm-anchorage-40334.herokuapp.com/song',
-      mobileDetail: true
+      mobileDetailArtist: "nothing as of yet",
+      mobileDetailSongName: "nothing as of yet"
     };
   }
 
@@ -230,16 +231,9 @@ export default class Index extends Component {
   }
 
   //// Showing Details for Mobile View when clicked on <tr> row
-  showDetailsForMobileClick(){
+  triggerDetails(artist, song_name){
 
     console.log("showing details");
-
-    if(this.state.mobileDetail){
-      this.setState({mobileDetails: false});  
-    }
-    else{
-      this.setState({mobileDetails: true});
-    }
   }
 
   //// Getting Table Rows ////
@@ -250,16 +244,17 @@ export default class Index extends Component {
   }
 
   tabRow_s(){
-    let somefunction = this.showDetailsForMobileClick.bind(this);
-    return this.state.songList.map(function(object, i){
-        return <TableRowSmall obj={object} key={i} showDetails={somefunction} />; // cant call this.showDetailsForMobileClick.bind(this) here because we're in different context
-    });
-  }
-
-  tabRow_s_detailed(){
-    let somefunction = this.showDetailsForMobileClick.bind(this);
-    return this.state.songList.map(function(object, i){
-        return <TableRowSmallDetailed obj={object} key={i} showDetails={somefunction} />; // cant call this.showDetailsForMobileClick.bind(this) here because we're in different context
+    let somefunction = this.triggerDetails.bind(this);
+    let artist = this.state.mobileDetailArtist;
+    let songName = this.state.mobileDetailSongName;
+    console.log(artist);
+    return this.state.songList.map(function(object, i){ // Care with this keyword context within return function
+      if(object.artist === artist && object.song_name === songName){
+        return <TableRowSmallDetailed obj={object} key={i} triggerDetails={somefunction(object.artist, object.song_name)} />;
+      }
+      else{
+        return <TableRowSmall obj={object} key={i} triggerDetails={somefunction(object.artist, object.song_name)} />;
+      }
     });
   }
 
@@ -268,14 +263,6 @@ export default class Index extends Component {
 
     if(this.state.songList.length === 0){
       message =  <Empty/>
-    }
-
-    let showMobile;
-    if(this.state.mobileDetail){
-      showMobile = this.tabRow_s_detailed();
-    }
-    else{
-      showMobile = this.tabRow_s();
     }
 
     return (
@@ -310,7 +297,7 @@ export default class Index extends Component {
               </tr>
             </thead>
             <tbody>
-              { showMobile }
+              { this.tabRow_s() }
             </tbody>
           </table>
           {message}

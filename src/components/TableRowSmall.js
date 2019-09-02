@@ -4,7 +4,7 @@ class TableRowSmall extends Component {
 
   render() {
     return (
-        <tr onClick={this.props.showDetails}>
+        <tr onClick={this.props.triggerDetails}>
           <td className="songname">
             <b>{this.props.obj.song_name}</b>
             <br/>
