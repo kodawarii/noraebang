@@ -132,6 +132,9 @@ class InnerApp extends Component {
                 <li className="nav-item">
                   <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
                 </li>
+                <li className="nav-item">
+                  <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Login</Link>
+                </li>
                 <li className="nav-padding-space-right"> </li>
               </ul>
             </nav>
@@ -154,6 +157,9 @@ class InnerApp extends Component {
                   </li>
                   <li className="nav-item-s">
                     <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected-s " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
+                  </li>
+                  <li className="nav-item-s">
+                    <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected-s " : "")} onClick={this.toggleBlog.bind(this)}>Login</Link>
                   </li>
                 </ul>
             </nav>

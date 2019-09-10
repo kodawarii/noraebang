@@ -15,8 +15,8 @@
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
  * @PBI FEAT001 - Add Karaoke App -- with youtube playlist API and video embedded
- * [in-progress] @PBI Add Blog App
- * @PBI FEAT002 - Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
+ * [in-progress] @PBI FEAT004 Add Blog App
+ * @PBI FEAT002 - Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available (so that we dont have to have separate admin front end app running along with a admin backend server app -- just have 1 frontend app, and multiple backends)
  * @PBI Search bar for searching ANY data from table
  * [DONE-2019/09/10] @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
  * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 
