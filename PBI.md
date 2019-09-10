@@ -18,5 +18,5 @@
  * [in-progress] @PBI Add Blog App
  * @PBI FEAT002 - Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available
  * @PBI Search bar for searching ANY data from table
- * @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
+ * [DONE-2019/09/10] @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
  * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 

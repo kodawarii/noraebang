@@ -67,36 +67,34 @@
 }
 
 .hamburger{
+  float: right;
+  padding: 4px 24px 0px 0px;
+  
+  color: rgb(197, 197, 197);
   font-size: 22px;
+}
+
+.hamburger:hover{
   color: white;
   text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
 
 .brandText-s{
-  padding: 12px 0px 12px 36px;
   float: left;
+  padding: 10px 0px 0px 20px;
   font-family: 'Gaegu', cursive;
   color: white;
   font-size: 20px;
   text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
 
-.brandText-s{
-  float: none;
-}
-
 .navbar-s{
-  background-color: rgb(27, 27, 27);
   width: 100%;
   position: fixed;
+  background-color: rgb(27, 27, 27);
   color: white;
-  text-align: center;
   font-size: 10px;
-  height: 50px;
-}
-
-.navbar-s{
-  height: 200px;
+  padding-bottom: 4px;
 }
 
 .navbar-s a{
@@ -110,9 +108,17 @@
 }
 
 .navbar-s-ul li{
+  display: none;
   list-style: none;
   padding: 4px 0 4px 0;
 }
+
+.navbar-s-ul-open li{
+  display: block;
+  list-style: none;
+  padding: 4px 0 4px 0;
+}
+
 
 .nav-selected-s{
   border-bottom: 2px solid rgb(180, 215, 255);

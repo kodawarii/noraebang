@@ -18,7 +18,9 @@ class InnerApp extends Component {
     this.state = {
       onHome: true,
       onIndex: false,
-      onBlog: false
+      onBlog: false,
+
+      hamburgerOpen: false
     }
   }
 
@@ -97,7 +99,12 @@ class InnerApp extends Component {
   }
 
   openHamburger(){
-    console.log("opening menu");
+    if(this.state.hamburgerOpen){
+      this.setState({hamburgerOpen: false});
+    }
+    else{
+      this.setState({hamburgerOpen: true});
+    }
   }
 
   render() {
@@ -131,11 +138,11 @@ class InnerApp extends Component {
             
             <nav className="navbar-s">
                 <span className="brandText-s">노래방DB</span>
+                <span onClick={this.openHamburger.bind(this)} className="hamburger">☰</span> 
+                
+                <br/><br/>
     
-                <ul className="navbar-s-ul">
-                  <li className="nav-item-s">
-                    <span onClick={this.openHamburger.bind(this)} className="hamburger">☰</span>
-                  </li>
+                <ul className={"navbar-s-ul " + (this.state.hamburgerOpen ? "navbar-s-ul-open" : "")}>
                   <li className="nav-item-s">
                     <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected-s " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
                   </li>
