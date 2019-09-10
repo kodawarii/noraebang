@@ -96,48 +96,61 @@ class InnerApp extends Component {
     });
   }
 
+  openHamburger(){
+    console.log("opening menu");
+  }
+
   render() {
     return (
       <HashRouter>
-        <div className="App">
-          <header className="App-header">
-          <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"></link>
+        
+          <header>
+            <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"></link>
 
-          <nav className="navbar">
-            <span className="nav-padding-space-left"> </span>
-            <span className="brandText">노래방DB</span>
+            <nav className="navbar">
+              <span className="brandText">노래방DB</span>
+              
+              <ul className="navbar-ul">
+                <li className="nav-item">
+                  <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Noraebang</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
+                </li>
+                <li className="nav-padding-space-right"> </li>
+              </ul>
+            </nav>
             
-            
-            <ul className="navbar-nav">
-              <li className="nav-item ">
-                <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
-              </li>
-              <li className="nav-item">
-                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
-              </li>
-              <li className="nav-padding-space-right"> </li>
-            </ul>
-
-            
-            <ul className="navbar-nav-s">
-              <li className="nav-item">
-                <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
-              </li>
-              <li className="nav-item">
-                <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
-              </li>
-            </ul>
-          </nav>
+            <nav className="navbar-s">
+                <span className="brandText-s">노래방DB</span>
+    
+                <ul className="navbar-s-ul">
+                  <li className="nav-item-s">
+                    <span onClick={this.openHamburger.bind(this)} className="hamburger">☰</span>
+                  </li>
+                  <li className="nav-item-s">
+                    <Link to={'/'} className={"nav-link " + (this.state.onHome ? "nav-selected-s " : "")} onClick={this.toggleHome.bind(this)}>Home</Link>
+                  </li>
+                  <li className="nav-item-s">
+                    <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected-s " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
+                  </li>
+                  <li className="nav-item-s">
+                    <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected-s " : "")} onClick={this.toggleIndex.bind(this)}>Noraebang</Link>
+                  </li>
+                  <li className="nav-item-s">
+                    <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected-s " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
+                  </li>
+                </ul>
+            </nav>
           </header>
-
 
           <div className="switch-div">
             <Switch>
@@ -146,7 +159,7 @@ class InnerApp extends Component {
               <Route path='/blog' component={ Blog } />
             </Switch>
           </div>
-        </div>
+        
       </HashRouter>
     );
   }

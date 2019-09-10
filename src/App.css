@@ -1,23 +1,11 @@
+/* 
+ *  Desktop screen Elements
+ */
 @media only screen and (min-width: 768px) {
-  /* For Desktop: */
-  .navbar-nav{
+  .navbar{
     display: block;
   }
-  .navbar-nav-s{
-    display: none;
-  }
-}
-
-
-@media only screen and (max-width: 768px) {
-  /* For Mobile: */
-  .navbar-nav{
-    display: none;
-  }
-  .navbar-nav-s{
-    display: block;
-  }
-  .searchbar{
+  .navbar-s{
     display: none;
   }
 }
@@ -43,7 +31,7 @@
 
 .navbar a{
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .navbar a:hover{
@@ -51,26 +39,13 @@
   text-shadow:1px 1px 10px rgb(255, 255, 255), 1px 1px 10px rgb(255, 255, 255);
 }
 
-.navbar-nav{
+.navbar-ul{
   float: right;
 }
 
-.navbar-nav-s{
-  float: right;
-}
-
-.navbar ul {
-  text-align: center;
-}
-
-.navbar-nav li{
+.navbar-ul li{
   display: inline;
   padding: 0px 24px 0px 24px;
-}
-
-.navbar-nav-s li{
-  display: inline;
-  padding: 0px 12px 0px 12px;
 }
 
 .nav-selected{
@@ -79,19 +54,75 @@
   text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
 
-/*
-.nav-padding-space-left{
-  border: 1px solid rgb(27, 27, 27);
-  float: left;
-  width: 300px;
+/* 
+ *  Mobile screen Elements
+ */
+@media only screen and (max-width: 768px) {
+  .navbar{
+    display: none;
+  }
+  .navbar-s{
+    display: block;
+  }
 }
 
-.nav-padding-space-right{
-  float: right;
-  width: 600px;
+.hamburger{
+  font-size: 22px;
+  color: white;
+  text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
 }
-*/
+
+.brandText-s{
+  padding: 12px 0px 12px 36px;
+  float: left;
+  font-family: 'Gaegu', cursive;
+  color: white;
+  font-size: 20px;
+  text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
+}
+
+.brandText-s{
+  float: none;
+}
+
+.navbar-s{
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+  position: fixed;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  height: 50px;
+}
+
+.navbar-s{
+  height: 200px;
+}
+
+.navbar-s a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-s a:hover{
+  color: rgb(195, 226, 255);
+  text-shadow:1px 1px 10px rgb(255, 255, 255), 1px 1px 10px rgb(255, 255, 255);
+}
+
+.navbar-s-ul li{
+  list-style: none;
+  padding: 4px 0 4px 0;
+}
+
+.nav-selected-s{
+  border-bottom: 2px solid rgb(180, 215, 255);
+  text-shadow:1px 1px 10px rgb(255, 99, 172), 1px 1px 10px rgb(194, 9, 111);
+}
+
+/* 
+ *  Non-Nav elements
+ */
 
 .switch-div{
-  padding: 6em 0 10em 0;
+  padding: 6em 0 10em 0; /* this is for content padding - top and bottom: do not delete/modify! */
 }
