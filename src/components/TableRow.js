@@ -5,6 +5,7 @@ class TableRow extends Component {
   handleClick() {
     //window.location.assign(this.props.obj.URL, '_blank');
     window.open(this.props.obj.URL, '_blank');
+    console.log("the youtube link: " + this.props.obj.URL);
   } 
 
   render() {
