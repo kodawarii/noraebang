@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 
-import Index from './index.component'; 
-import Blog from './Blog.component'; 
-import Home from './home.component'; 
+import Index from './index.component';
+import Blog from './Blog.component';
+import Noraebang from './Noraebang.component'; 
+import Home from './home.component';
+import LoginPage from './LoginPage.component';
 
 /**
  * "Because Karaoke was too damn expensive, decided to buy my own equipment and make my own app"
- * 
  */
 
 class InnerApp extends Component {
@@ -19,6 +20,8 @@ class InnerApp extends Component {
       onHome: true,
       onIndex: false,
       onBlog: false,
+      onNoraebang: false,
+      onLoginPage: false,
 
       hamburgerOpen: false
     }
@@ -46,23 +49,52 @@ class InnerApp extends Component {
         this.setState({
           onHome: true,
           onIndex: false,
-          onBlog: false
+          onBlog: false,
+          onNoraebang: false,
+          onLoginPage: false,
         });
         break;
+
       case "index":
         this.setState({
           onHome: false,
           onIndex: true,
-          onBlog: false
+          onBlog: false,
+          onNoraebang: false,
+          onLoginPage: false,
         });
         break;
+
       case "blog":
         this.setState({
           onHome: false,
           onIndex: false,
-          onBlog: true
+          onBlog: true,
+          onNoraebang: false,
+          onLoginPage: false,
         });
         break;
+      
+      case "noraebang":
+        this.setState({
+          onHome: false,
+          onIndex: false,
+          onBlog: false,
+          onNoraebang: true,
+          onLoginPage: false,
+        });
+        break;
+      
+      case "loginpage":
+        this.setState({
+          onHome: false,
+          onIndex: false,
+          onBlog: false,
+          onNoraebang: false,
+          onLoginPage: true,
+        });
+        break;
+
       default:
         break;
     }
@@ -78,7 +110,9 @@ class InnerApp extends Component {
     this.setState({
       onHome: true,
       onIndex: false,
-      onBlog: false
+      onBlog: false,
+      onNoraebang: false,
+      onLoginPage: false,
     });
   }
 
@@ -86,7 +120,9 @@ class InnerApp extends Component {
     this.setState({
       onHome: false,
       onIndex: true,
-      onBlog: false
+      onBlog: false,
+      onNoraebang: false,
+      onLoginPage: false,
     });
   }
 
@@ -94,7 +130,29 @@ class InnerApp extends Component {
     this.setState({
       onHome: false,
       onIndex: false,
-      onBlog: true
+      onBlog: true,
+      onNoraebang: false,
+      onLoginPage: false,
+    });
+  }
+
+  toggleNoraebang(){
+    this.setState({
+      onHome: false,
+      onIndex: false,
+      onBlog: false,
+      onNoraebang: true,
+      onLoginPage: false,
+    });
+  }
+
+  toggleLoginPage(){
+    this.setState({
+      onHome: false,
+      onIndex: false,
+      onBlog: false,
+      onNoraebang: false,
+      onLoginPage: true,
     });
   }
 
@@ -127,13 +185,13 @@ class InnerApp extends Component {
                   <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected " : "")} onClick={this.toggleIndex.bind(this)}>Noraebang</Link>
+                  <Link to={'/noraebang'} className={"nav-link " + (this.state.onNoraebang ? "nav-selected " : "")} onClick={this.toggleNoraebang.bind(this)}>Noraebang</Link>
                 </li>
                 <li className="nav-item">
                   <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected " : "")} onClick={this.toggleBlog.bind(this)}>Login</Link>
+                  <Link to={'/loginpage'} className={"nav-link " + (this.state.onLoginPage ? "nav-selected " : "")} onClick={this.toggleLoginPage.bind(this)}>Login</Link>
                 </li>
                 <li className="nav-padding-space-right"> </li>
               </ul>
@@ -153,13 +211,13 @@ class InnerApp extends Component {
                     <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected-s " : "")} onClick={this.toggleIndex.bind(this)}>The DB</Link>
                   </li>
                   <li className="nav-item-s">
-                    <Link to={'/index'} className={"nav-link " + (this.state.onIndex ? "nav-selected-s " : "")} onClick={this.toggleIndex.bind(this)}>Noraebang</Link>
+                  <Link to={'/noraebang'} className={"nav-link " + (this.state.onNoraebang ? "nav-selected-s " : "")} onClick={this.toggleNoraebang.bind(this)}>Noraebang</Link>
                   </li>
                   <li className="nav-item-s">
                     <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected-s " : "")} onClick={this.toggleBlog.bind(this)}>Blog</Link>
                   </li>
                   <li className="nav-item-s">
-                    <Link to={'/blog'} className={"nav-link " + (this.state.onBlog ? "nav-selected-s " : "")} onClick={this.toggleBlog.bind(this)}>Login</Link>
+                  <Link to={'/loginpage'} className={"nav-link " + (this.state.onLoginPage ? "nav-selected-s " : "")} onClick={this.toggleLoginPage.bind(this)}>Login</Link>
                   </li>
                 </ul>
             </nav>
@@ -169,7 +227,9 @@ class InnerApp extends Component {
             <Switch>
               <Route exact path='/' component={ Home } />
               <Route exact path='/index' component={ Index } />
+              <Route exact path='/noraebang' component={ Noraebang } />
               <Route path='/blog' component={ Blog } />
+              <Route path='/loginpage' component={ LoginPage } />
             </Switch>
           </div>
         

@@ -14,9 +14,15 @@
  * [DONE-2019/08/06] @TODO Change onROUTE states so that on refresh, nav blue bars are on correct nav item
  * 
  * [Not-required] @PBI Change content of home and about pages for prod
- * @PBI FEAT001 - Add Karaoke App -- with youtube playlist API and video embedded
- * [in-progress] @PBI FEAT004 Add Blog App
+ * [LETS DO THIS NOWWWWW] @PBI FEAT001 - Add Karaoke App -- with youtube playlist API and video embedded
+ * @PBI FEAT004 - Add Blog App
  * @PBI FEAT002 - Create Login/Authentication for Admin App - But noraebangbackend is only local and privately available (so that we dont have to have separate admin front end app running along with a admin backend server app -- just have 1 frontend app, and multiple backends)
  * @PBI Search bar for searching ANY data from table
  * [DONE-2019/09/10] @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
- * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label 
+ * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label [login required?]
+
+<summary of major features>
+ - <Feat002-1>Login Feature
+ - <FEAT004> Blog Feature (Must be logged in to add posts)
+ - <Feat002-2> Admin App Feature (Must be logged in to access - link not shown unless logged in)
+ - <FEAT001> Karaoke App Feature (no login required) - Front end mechanics
