@@ -7,10 +7,22 @@ import './style-noraebang.css';
 
 export default class Noraebang extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      queueOfDetails: [],
+      queueOfIDs: [] // has list of youtube vid ID's
+    };
+  }
+
+  makeReservation(artist, songname, id){
+      console.log("Details: " + artist + " " + songname + " " + id);
+  }
+
   render() {
     const opts = {
-        height: '390',
-        width: '640',
+        height: '480',
+        width: '960',
         playerVars: { // https://developers.google.com/youtube/player_parameters
           autoplay: 0
         }
@@ -18,20 +30,24 @@ export default class Noraebang extends Component {
 
     return (
       <div className="noraebang">
-        <h1>KARAOKE APP</h1>
         <div className="listOfSongsOuter">
             <div className="listOfSongs">
-                <SongList />
+                <SongList 
+                makeReservation={this.makeReservation.bind(this)}
+                />
             </div>
         </div>
         <div className="youtubeScreenOuter">
             <div className="youtubeScreen"> 
-                <h2> Youtube iFrame </h2>
                 <YouTube
                 videoId="NEaA_aEvKBA"
                 opts={opts}
                 onReady={this._onReady}
                 />
+            </div>
+            <br/>
+            <div className="reservationsList">
+                Reserved Songs
             </div>
         </div>
         <div className="inprogress">

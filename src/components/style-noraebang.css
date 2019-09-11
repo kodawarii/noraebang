@@ -2,7 +2,7 @@
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
     .listOfSongsOuter{
-        padding-left: 50px;
+        padding-left: 70px;
         float: left;
         height: 200px;
     }
@@ -12,13 +12,17 @@
     }
     
     .youtubeScreenOuter{
-        padding-right: 50px;
+        padding-right: 70px;
         float: right;
         height: 200px;
     }
     
     .youtubeScreen{
         border: 1px solid rgb(228, 228, 228);
+    }
+
+    .reservationsList{
+        border: 1px solid rgb(189, 189, 189);
     }
 
     .inprogress{

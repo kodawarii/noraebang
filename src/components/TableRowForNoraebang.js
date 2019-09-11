@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 class TableRowForNoraebang extends Component {
 
-  handleClick() {
-    console.log("예약 하는중");
+    handleClick() {
+    
+    this.props.makeReservation(this.props.artist, this.props.song_name, this.props.URL);
   } 
 
   render() {

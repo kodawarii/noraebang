@@ -19,8 +19,6 @@ export default class SongList extends Component {
     this.state = {
       songList: [],
       baseURL: 'https://calm-anchorage-40334.herokuapp.com/song',
-      mobileDetailArtist: "nothing as of yet 1",
-      mobileDetailSongName: "nothing as of yet 2"
     };
   }
 
@@ -84,154 +82,15 @@ export default class SongList extends Component {
     }
   }
 
-  handleSortLength(order){
-    if(order === "asc"){
-      axios.get(this.state.baseURL+'/length_sort_asc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else if(order === "desc"){
-      axios.get(this.state.baseURL+'/length_sort_desc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else{
-      console.log("");
-    }
-  }
-
-  handleSortKey(order){
-    if(order === "asc"){
-      axios.get(this.state.baseURL+'/key_sort_asc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else if(order === "desc"){
-      axios.get(this.state.baseURL+'/key_sort_desc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else{
-      console.log("");
-    }
-  }
-
-  handleSortHighestNote(order){
-    if(order === "asc"){
-      axios.get(this.state.baseURL+'/max_key_sort_asc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else if(order === "desc"){
-      axios.get(this.state.baseURL+'/max_key_sort_desc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else{
-      console.log("");
-    }
-  }
-
-  handleSortTJ(order){
-    if(order === "asc"){
-      axios.get(this.state.baseURL+'/tj_number_sort_asc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else if(order === "desc"){
-      axios.get(this.state.baseURL+'/tj_number_sort_desc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else{
-      console.log("");
-    }
-  }
-
-  handleSortKY(order){
-    if(order === "asc"){
-      axios.get(this.state.baseURL+'/ky_number_sort_asc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else if(order === "desc"){
-      axios.get(this.state.baseURL+'/ky_number_sort_desc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else{
-      console.log("");
-    }
-  }
-
-  handleSortOrder(order){
-    if(order === "asc"){
-      axios.get(this.state.baseURL+'/order_sort_asc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else if(order === "desc"){
-      axios.get(this.state.baseURL+'/order_sort_desc/')
-      .then(response => {
-        this.setState({ songList: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
-    else{
-      console.log("");
-    }
+  makeReservation(artist, songname, id){
+    this.props.makeReservation(artist, songname, id);
   }
 
   //// Getting Table Rows ////
   tabRow(){
+    let myfunction = this.makeReservation.bind(this);
     return this.state.songList.map(function(object, i){
-        return <TableRowForNoraebang obj={object} key={i} />;
+        return <TableRowForNoraebang obj={object} key={i} makeReservation={myfunction}/>;
     });
   }
 
