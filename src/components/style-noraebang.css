@@ -1,35 +1,42 @@
+/* Desktop Styles */
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
+    .listOfSongsOuter{
+        padding-left: 50px;
+        float: left;
+        height: 200px;
+    }
+    
+    .listOfSongs{
+        border: 1px solid rgb(221, 221, 221);
+    }
+    
+    .youtubeScreenOuter{
+        padding-right: 50px;
+        float: right;
+        height: 200px;
+    }
+    
+    .youtubeScreen{
+        border: 1px solid rgb(228, 228, 228);
+    }
+
+    .inprogress{
+        display: none;
+    }
     
 }
   
-  
+/* Mobile Styles */
 @media only screen and (max-width: 768px) {
     /* For Mobile: */
-    
+    .listOfSongsOuter, .youtubeScreenOuter{
+        display: none;
+    }
 }
 
+/* Common Styles for both Desktop and Mobile */
 .noraebang{
     font-family: 'Raleway', sans-serif;
     text-align: center;
-}
-
-.listOfSongsOuter{
-    padding-left: 50px;
-    float: left;
-    height: 200px;
-}
-
-.listOfSongs{
-    border: 1px solid rgb(221, 221, 221);
-}
-
-.youtubeScreenOuter{
-    padding-right: 50px;
-    float: right;
-    height: 200px;
-}
-
-.youtubeScreen{
-    border: 1px solid rgb(228, 228, 228);
 }

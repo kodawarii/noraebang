@@ -15,7 +15,7 @@ class TableRow extends Component {
     if(this.props.obj.URL !== ""){
       youtube = 
       <span className="youtubelink">
-      <span href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</span>
+        <span href="#" onClick={this.handleClick.bind(this)} className="youtubeLink">Youtube</span>
       </span>
     }
 
