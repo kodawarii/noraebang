@@ -1,8 +1,20 @@
 /* Desktop Styles */
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
+    .listOfSongsOuter{
+        padding-left: 70px;
+        float: left;
+        height: 200px;
+    }
+    
+    .listOfSongs{
+        border: 1px solid rgb(221, 221, 221);
+    }
+    
     .youtubeScreenOuter{
-        
+        padding-right: 70px;
+        float: right;
+        height: 200px;
     }
     
     .youtubeScreen{
@@ -16,14 +28,7 @@
     .inprogress{
         display: none;
     }
-
-    .listOfSongsOuter{
-        
-    }
     
-    .listOfSongs{
-        border: 1px solid rgb(221, 221, 221);
-    }
 }
   
 /* Mobile Styles */

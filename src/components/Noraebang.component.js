@@ -36,7 +36,14 @@ export default class Noraebang extends Component {
 
     return (
       <div className="noraebang">
-       <div className="youtubeScreenOuter">
+        <div className="listOfSongsOuter">
+            <div className="listOfSongs">
+                <SongList 
+                makeReservation={this.makeReservation.bind(this)}
+                />
+            </div>
+        </div>
+        <div className="youtubeScreenOuter">
             <div className="youtubeScreen"> 
                 <YouTube
                 videoId={this.state.currentVideo}
@@ -45,12 +52,8 @@ export default class Noraebang extends Component {
                 />
             </div>
             <br/>
-        </div>
-        <div className="listOfSongsOuter">
-            <div className="listOfSongs">
-                <SongList 
-                makeReservation={this.makeReservation.bind(this)}
-                />
+            <div className="reservationsList">
+                Reserved Songs
             </div>
         </div>
         <div className="inprogress">
