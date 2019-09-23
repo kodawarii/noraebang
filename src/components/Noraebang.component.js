@@ -16,7 +16,7 @@ export default class Noraebang extends Component {
   }
 
   makeReservation(artist, songname, id){
-      console.log("Details: " + artist + " " + songname + " " + id);
+      console.log("Making Reservation. Details: " + artist + " " + songname + " " + id);
   }
 
   render() {

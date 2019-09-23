@@ -90,7 +90,8 @@ export default class SongList extends Component {
   tabRow(){
     let myfunction = this.makeReservation.bind(this);
     return this.state.songList.map(function(object, i){
-        return <TableRowForNoraebang obj={object} key={i} makeReservation={myfunction}/>;
+        
+        return <TableRowForNoraebang obj={object} key={i} makeReservation={myfunction.bind(this)}/>;
     });
   }
 

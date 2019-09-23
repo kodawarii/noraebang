@@ -20,6 +20,7 @@
  * @PBI Search bar for searching ANY data from table
  * [DONE-2019/09/10] @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
  * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label [login required?]
+ * @PBI feature where you can save playlists
 
 <summary of major features>
  - <Feat002-1>Login Feature

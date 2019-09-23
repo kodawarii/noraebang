@@ -4,7 +4,7 @@ class TableRowForNoraebang extends Component {
 
     handleClick() {
     
-    this.props.makeReservation(this.props.artist, this.props.song_name, this.props.URL);
+    this.props.makeReservation(this.props.obj.artist, this.props.obj.song_name, this.props.obj.URL);
   } 
 
   render() {
