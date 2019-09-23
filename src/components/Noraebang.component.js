@@ -10,13 +10,19 @@ export default class Noraebang extends Component {
   constructor(props){
     super(props);
     this.state = {
+      currentVideo: " ",
       queueOfDetails: [],
       queueOfIDs: [] // has list of youtube vid ID's
     };
   }
 
   makeReservation(artist, songname, id){
-      console.log("Making Reservation. Details: " + artist + " " + songname + " " + id);
+      this.state.queueOfDetails.push(artist + " - " + songname);
+      this.state.queueOfIDs.push(id.slice(32, id.length));
+
+      this.setState({currentVideo: id.slice(32, id.length)});
+      console.log(this.state.queueOfDetails);
+      console.log(this.state.queueOfIDs);
   }
 
   render() {
@@ -24,7 +30,7 @@ export default class Noraebang extends Component {
         height: '480',
         width: '960',
         playerVars: { // https://developers.google.com/youtube/player_parameters
-          autoplay: 0
+          autoplay: 1
         }
       };
 
@@ -40,7 +46,7 @@ export default class Noraebang extends Component {
         <div className="youtubeScreenOuter">
             <div className="youtubeScreen"> 
                 <YouTube
-                videoId="NEaA_aEvKBA"
+                videoId={this.state.currentVideo}
                 opts={opts}
                 onReady={this._onReady}
                 />
