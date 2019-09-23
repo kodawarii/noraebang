@@ -10,11 +10,33 @@ export default class Noraebang extends Component {
   constructor(props){
     super(props);
     this.state = {
-      currentVideo: " ",
+      videoHeight: 680,
+      videoWidth: 1200,
+      currentVideo: "JTkz54POcUQ",
       queueOfDetails: [],
       queueOfIDs: [] // has list of youtube vid ID's
     };
   }
+
+  componentDidMount(){
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+
+  resize() {
+    if(window.innerWidth >= 1850){
+      this.setState({videoWidth: 1200});
+      this.setState({videoHeight: 680});
+    }
+    else if(window.innerWidth <= 1550){
+      this.setState({videoWidth: 620});
+      this.setState({videoHeight: 430});
+    }
+    else if(window.innerWidth <= 1850){
+      this.setState({videoWidth: 900});
+      this.setState({videoHeight: 550});
+    }   
+}
 
   makeReservation(artist, songname, id){
       this.state.queueOfDetails.push(artist + " - " + songname);
@@ -27,8 +49,8 @@ export default class Noraebang extends Component {
 
   render() {
     const opts = {
-        height: '480',
-        width: '960',
+        height: this.state.videoHeight,
+        width: this.state.videoWidth,
         playerVars: { // https://developers.google.com/youtube/player_parameters
           autoplay: 1
         }

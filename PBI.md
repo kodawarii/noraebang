@@ -21,7 +21,8 @@
  * [DONE-2019/09/10] @PBI change mobile nav to hamburger (for blog, Karaoke app etc, Login etc)
  * @PBI FEAT003 - Heart Feature - "To Practice" "Hot" selection / Recently learnt etc - some sort of label [login required?]
  * @PBI feature where you can save playlists
- * @PBI feature where initial noraebang-app screen shows funny splash screen "Make Reservations to get app started!" kinda thing
+ * @PBI feature where initial noraebang-app screen (empty youtube video) shows funny splash screen "Make Reservations to get app started!" kinda thing
+    currently it shows ugly error message
 
 <summary of major features>
  - <Feat002-1>Login Feature

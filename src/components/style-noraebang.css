@@ -1,6 +1,70 @@
 /* Desktop Styles */
-@media only screen and (min-width: 768px) {
-    /* For Desktop: */
+@media only screen and (min-width: 1250px) {
+    /* For Desktop-SMALLER: */
+    .listOfSongsOuter{
+        padding-left: 70px;
+        float: left;
+        height: 200px;
+    }
+    
+    .listOfSongs{
+        border: 1px solid rgb(0, 26, 255);
+    }
+    
+    .youtubeScreenOuter{
+        padding-right: 100px;
+        float: right;
+        height: 200px;
+    }
+    
+    .youtubeScreen{
+        
+    }
+
+    .reservationsList{
+        border: 1px solid rgb(0, 17, 255);
+    }
+
+    .inprogress{
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 1550px) {
+    /* For Desktop-MEDIUM: */
+    .listOfSongsOuter{
+        padding-left: 70px;
+        float: left;
+        height: 200px;
+    }
+    
+    .listOfSongs{
+        border: 1px solid rgb(255, 0, 0);
+    }
+    
+    .youtubeScreenOuter{
+        padding-right: 100px;
+        float: right;
+        height: 200px;
+    }
+    
+    .youtubeScreen{
+        
+    }
+
+    .reservationsList{
+        border: 1px solid rgb(255, 0, 0);
+    }
+
+    .inprogress{
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 1850px) {
+    /* For Desktop-LARGE: */
     .listOfSongsOuter{
         padding-left: 70px;
         float: left;
@@ -12,13 +76,13 @@
     }
     
     .youtubeScreenOuter{
-        padding-right: 70px;
+        padding-right: 100px;
         float: right;
         height: 200px;
     }
     
     .youtubeScreen{
-        border: 1px solid rgb(228, 228, 228);
+        
     }
 
     .reservationsList{
@@ -32,10 +96,14 @@
 }
   
 /* Mobile Styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1250px) {
     /* For Mobile: */
     .listOfSongsOuter, .youtubeScreenOuter{
         display: none;
+    }
+
+    .inprogress{
+        display: block;
     }
 }
 

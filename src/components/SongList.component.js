@@ -82,6 +82,7 @@ export default class SongList extends Component {
     }
   }
 
+  //// OTHERS
   makeReservation(artist, songname, id){
     this.props.makeReservation(artist, songname, id);
   }
