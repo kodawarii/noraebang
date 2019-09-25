@@ -46,14 +46,16 @@ export default class Noraebang extends Component {
 
       this.setState({updater: "x"});
 
+      // PLAY NOW feature
       //this.setState({currentVideoID: id.slice(32, id.length)});
       //this.setState({currentVideoDetails: artist + songname});
-      console.log(this.state.queueOfDetails);
-      console.log(this.state.queueOfIDs);
+
+      //console.log(this.state.queueOfDetails);
+      //console.log(this.state.queueOfIDs);
   }
 
   playNextSong(){
-    console.log(this.state.queueOfIDs);
+    //console.log(this.state.queueOfIDs);
     this.setState({currentVideoID: this.state.queueOfIDs.shift()});
     this.setState({currentVideoDetails: this.state.queueOfDetails.shift()});
   }
