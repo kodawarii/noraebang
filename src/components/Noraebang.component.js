@@ -10,9 +10,11 @@ export default class Noraebang extends Component {
   constructor(props){
     super(props);
     this.state = {
+      updater: "",
       videoHeight: 680,
       videoWidth: 1200,
-      currentVideo: "JTkz54POcUQ",
+      currentVideoID: "lFy3b98_lIc",
+      currentVideoDetails: "사랑비",
       queueOfDetails: [],
       queueOfIDs: [] // has list of youtube vid ID's
     };
@@ -39,12 +41,21 @@ export default class Noraebang extends Component {
 }
 
   makeReservation(artist, songname, id){
-      this.state.queueOfDetails.push(artist + " - " + songname);
+      this.state.queueOfDetails.push(songname);
       this.state.queueOfIDs.push(id.slice(32, id.length));
 
-      this.setState({currentVideo: id.slice(32, id.length)});
+      this.setState({updater: "x"});
+
+      //this.setState({currentVideoID: id.slice(32, id.length)});
+      //this.setState({currentVideoDetails: artist + songname});
       console.log(this.state.queueOfDetails);
       console.log(this.state.queueOfIDs);
+  }
+
+  playNextSong(){
+    console.log(this.state.queueOfIDs);
+    this.setState({currentVideoID: this.state.queueOfIDs.shift()});
+    this.setState({currentVideoDetails: this.state.queueOfDetails.shift()});
   }
 
   render() {
@@ -54,8 +65,12 @@ export default class Noraebang extends Component {
         playerVars: { // https://developers.google.com/youtube/player_parameters
           autoplay: 1
         },
-        playlist: this.state.queueOfIDs
-      };
+    };
+
+    let reservationList = "";
+    for(var i = 0; i < this.state.queueOfDetails.length; i++){
+      reservationList += this.state.queueOfDetails[i] + " | ";
+    }
 
     return (
       <div className="noraebang">
@@ -69,14 +84,19 @@ export default class Noraebang extends Component {
         <div className="youtubeScreenOuter">
             <div className="youtubeScreen"> 
                 <YouTube
-                videoId={this.state.currentVideo}
+                videoId={this.state.currentVideoID}
                 opts={opts}
                 onReady={this._onReady}
+                onEnd={this.playNextSong.bind(this)}
                 />
             </div>
             <br/>
             <div className="reservationsList">
-                Reserved Songs
+              Current: {this.state.currentVideoDetails}
+            </div>
+            <div className="reservationsList">
+              <h3> Reserved Songs </h3>
+              {reservationList}
             </div>
         </div>
         <div className="inprogress">
