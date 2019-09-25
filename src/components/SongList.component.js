@@ -7,7 +7,7 @@ import Empty from './Empty.component';
 import SortArrow from './SortArrow';
 
 // Stylesheets
-import './style-index.css';
+import './style-SongList.css';
 
 export default class SongList extends Component {
 
@@ -104,7 +104,7 @@ export default class SongList extends Component {
     }
 
     return (
-      <div className="tableContainer">
+      <div className="tableContainer-sl">
         <h2> SONG LIST </h2>
           <table className="mytable">
             <thead>

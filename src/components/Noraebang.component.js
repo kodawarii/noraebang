@@ -53,7 +53,8 @@ export default class Noraebang extends Component {
         width: this.state.videoWidth,
         playerVars: { // https://developers.google.com/youtube/player_parameters
           autoplay: 1
-        }
+        },
+        playlist: this.state.queueOfIDs
       };
 
     return (
