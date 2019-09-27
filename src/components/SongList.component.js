@@ -105,8 +105,8 @@ export default class SongList extends Component {
 
     return (
       <div className="tableContainer-sl">
-        <h2> SONG LIST </h2>
-          <table className="mytable">
+        <h4> 노래책 </h4>
+          <table className="mytable-sl">
             <thead>
               <tr>
                 <th> 가수 <SortArrow clickButton={this.handleSortArtist.bind(this)}/></th>

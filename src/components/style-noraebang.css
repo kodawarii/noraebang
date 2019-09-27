@@ -2,29 +2,17 @@
 @media only screen and (min-width: 1250px) {
     /* For Desktop-SMALLER: */
     .listOfSongsOuter{
-        padding-left: 70px;
+        padding: 40px 0 0 70px;
         float: left;
         height: 200px;
     }
     
-    .listOfSongs{
-        border: 1px solid rgb(0, 26, 255);
-    }
-    
     .youtubeScreenOuter{
-        padding-right: 100px;
+        padding: 60px 80px 0 0;
         float: right;
         height: 200px;
     }
     
-    .youtubeScreen{
-        
-    }
-
-    .reservationsList{
-        border: 1px solid rgb(0, 17, 255);
-    }
-
     .inprogress{
         display: none;
     }
@@ -34,27 +22,15 @@
 @media only screen and (min-width: 1550px) {
     /* For Desktop-MEDIUM: */
     .listOfSongsOuter{
-        padding-left: 70px;
+        padding: 40px 0 0 70px;
         float: left;
         height: 200px;
     }
     
-    .listOfSongs{
-        border: 1px solid rgb(255, 0, 0);
-    }
-    
     .youtubeScreenOuter{
-        padding-right: 100px;
+        padding: 60px 80px 0 0;
         float: right;
         height: 200px;
-    }
-    
-    .youtubeScreen{
-        
-    }
-
-    .reservationsList{
-        border: 1px solid rgb(255, 0, 0);
     }
 
     .inprogress{
@@ -66,27 +42,15 @@
 @media only screen and (min-width: 1850px) {
     /* For Desktop-LARGE: */
     .listOfSongsOuter{
-        padding-left: 70px;
+        padding: 0px 0 0 70px;
         float: left;
         height: 200px;
     }
     
-    .listOfSongs{
-        border: 1px solid rgb(221, 221, 221);
-    }
-    
     .youtubeScreenOuter{
-        padding-right: 100px;
+        padding: 0 80px 0 0;
         float: right;
         height: 200px;
-    }
-    
-    .youtubeScreen{
-        
-    }
-
-    .reservationsList{
-        border: 1px solid rgb(189, 189, 189);
     }
 
     .inprogress{
@@ -103,12 +67,135 @@
     }
 
     .inprogress{
+        color: white;
         display: block;
     }
 }
 
 /* Common Styles for both Desktop and Mobile */
 .noraebang{
-    font-family: 'Raleway', sans-serif;
+    background-color: rgb(8, 8, 8);
+    z-index: -1;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%; 
+}
+
+.noraebangHeader{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 12px rgb(255, 152, 18), 1px 1px 12px rgb(255, 230, 0);
+    animation: noraebangHeaderAnimation 4s infinite;
+}
+
+@keyframes noraebangHeaderAnimation {
+    0%{
+        text-shadow: 1px 1px 12px rgb(255, 152, 18), 1px 1px 12px rgb(255, 230, 0);
+    }
+    50%{
+        text-shadow: 1px 1px 12px rgb(255, 18, 129), 1px 1px 12px rgb(252, 60, 133);
+    }
+    100%{
+        text-shadow: 1px 1px 12px rgb(255, 152, 18), 1px 1px 12px rgb(255, 230, 0);
+    }
+}
+
+.noraebang h2{
     text-align: center;
+}
+
+.currentHeaderContainerContainer{
+    padding-top: 20px;
+}
+
+.currentHeaderContainer{
+    padding: 12px;
+    border: 2px solid rgb(172, 129, 0);
+    box-shadow: 0 0 6px #c5d300;
+    border-radius: 8px;
+
+    animation: borderAnimation 4s infinite;
+}
+
+@keyframes borderAnimation {
+    0%{
+        border: 2px solid rgb(172, 129, 0);
+        box-shadow: 0 0 6px #c5d300;
+    }
+    50%{
+        border: 2px solid rgb(216, 32, 0);
+        box-shadow: 0 0 6px #ff5b5b;
+    }
+    100%{
+        border: 2px solid rgb(172, 129, 0);
+        box-shadow: 0 0 6px #c5d300;
+    }
+}
+
+.currentHeaderContainer:hover{
+    color: rgb(182, 182, 182);
+}
+
+.playArrow{
+    animation: arrowAnimation 4s infinite;
+}
+
+@keyframes arrowAnimation {
+    0%{
+        color: rgb(221, 255, 142);
+        transform: rotate(0deg);
+    }
+    50%{
+        color: rgb(255, 153, 0);
+        transform: rotate(180deg);
+    }
+    100%{
+        color: rgb(221, 255, 142);
+        transform: rotate(0deg);
+    }
+}
+
+.currentHeader{
+    padding: 0 0 0 12px;
+    color: rgb(221, 255, 142);
+}
+
+.cancelBtn{
+    color: rgb(255, 121, 121);
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 10px;
+    padding: 2px 8px 2px 8px;
+}
+
+.cancelBtn:hover{
+    color: rgb(255, 0, 119);
+}
+
+.reserveContainer{
+    padding-top: 38px;
+}
+
+.reservedHeader{
+    color: rgb(221, 255, 142);
+}
+
+.reserveBody{
+    color: rgb(142, 172, 255);
+}
+
+.song-item-outer{
+    padding: 0 6px 0 6px;
+}
+
+.song-item-inner{
+    padding: 4px;
+    color: rgb(253, 214, 106);
+    text-shadow: 1px 1px 6px rgb(251, 255, 18), 1px 1px 6px rgb(136, 134, 3);
+    border: 1px solid rgb(255, 207, 103);
+    border-radius: 8px;
+}
+
+.song-item-inner:hover{
+    color: rgb(231, 231, 231);
+    text-shadow: 1px 1px 6px rgb(189, 192, 0), 1px 1px 6px rgb(255, 252, 55);
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube'; // npm install react-youtube
 
 import SongList from './SongList.component';
+import ReservationList from './ReservationList.component';
 
 import './style-noraebang.css';
 
@@ -16,7 +17,7 @@ export default class Noraebang extends Component {
       currentVideoID: "lFy3b98_lIc",
       currentVideoDetails: "사랑비",
       queueOfDetails: [],
-      queueOfIDs: [] // has list of youtube vid ID's
+      queueOfIDs: []
     };
   }
 
@@ -56,6 +57,7 @@ export default class Noraebang extends Component {
 
   playNextSong(){
     //console.log(this.state.queueOfIDs);
+
     this.setState({currentVideoID: this.state.queueOfIDs.shift()});
     this.setState({currentVideoDetails: this.state.queueOfDetails.shift()});
   }
@@ -64,18 +66,14 @@ export default class Noraebang extends Component {
     const opts = {
         height: this.state.videoHeight,
         width: this.state.videoWidth,
-        playerVars: { // https://developers.google.com/youtube/player_parameters
+        playerVars: {
           autoplay: 1
         },
     };
 
-    let reservationList = "";
-    for(var i = 0; i < this.state.queueOfDetails.length; i++){
-      reservationList += this.state.queueOfDetails[i] + " | ";
-    }
-
     return (
       <div className="noraebang">
+        <h2 className="noraebangHeader"> 노래방 </h2>
         <div className="listOfSongsOuter">
             <div className="listOfSongs">
                 <SongList 
@@ -94,11 +92,10 @@ export default class Noraebang extends Component {
             </div>
             <br/>
             <div className="reservationsList">
-              Current: {this.state.currentVideoDetails}
-            </div>
-            <div className="reservationsList">
-              <h3> Reserved Songs </h3>
-              {reservationList}
+              <ReservationList
+              reservationList = {this.state.queueOfDetails}
+              currentVideoDetails = {this.state.currentVideoDetails}
+              />
             </div>
         </div>
         <div className="inprogress">
