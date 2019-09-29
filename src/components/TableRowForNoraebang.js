@@ -11,7 +11,7 @@ class TableRowForNoraebang extends Component {
     let reserve;
 
     if(this.props.obj.URL !== ""){
-      reserve = <span href="#" onClick={this.handleClick.bind(this)} className="reserve">예약 ▷ </span>
+      reserve = <span href="#" onClick={this.handleClick.bind(this)} className="reserve"> ▷ </span>
     }
 
     return (

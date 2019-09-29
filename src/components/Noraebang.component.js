@@ -6,14 +6,16 @@ import ReservationList from './ReservationList.component';
 
 import './style-noraebang.css';
 
+// Use-case Laptop: 1366px x 768px
+
 export default class Noraebang extends Component {
 
   constructor(props){
     super(props);
     this.state = {
       updater: "",
-      videoHeight: 680,
-      videoWidth: 1200,
+      videoHeight: 450,
+      videoWidth: 916,
       currentVideoID: "lFy3b98_lIc",
       currentVideoDetails: "사랑비",
       queueOfDetails: [],
@@ -27,16 +29,16 @@ export default class Noraebang extends Component {
   }
 
   resize() {
-    if(window.innerWidth >= 1850){
+    if(window.innerWidth >= 1850 && window.innerHeight >= 969){
       this.setState({videoWidth: 1200});
-      this.setState({videoHeight: 680});
+      this.setState({videoHeight: 650});
     }
-    else if(window.innerWidth <= 1550){
-      this.setState({videoWidth: 620});
-      this.setState({videoHeight: 430});
+    else if(window.innerWidth <= 1700){
+      this.setState({videoWidth: 916});
+      this.setState({videoHeight: 450});
     }
     else if(window.innerWidth <= 1850){
-      this.setState({videoWidth: 900});
+      this.setState({videoWidth: 1000});
       this.setState({videoHeight: 550});
     }   
 }

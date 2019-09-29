@@ -1,21 +1,53 @@
+.searchbar{
+  background: none;
+  border: 1px solid #ff8c4a;
+  border-radius: 16px;
+  padding: 8px 20px;
+  color: #548afd;
+}
+
+.inputField:focus{
+  border-color: rgb(106, 109, 255);
+  box-shadow: 0 0 12px #8cd1ff;
+  border-radius: 50%;
+  padding: 12px 20px;
+  outline: none;
+}
+
+.schBtnContainer{
+  padding-left: 12px;
+}
+
+.searchBtn{
+  background: none;
+  border: 1px solid #ff8c4a;
+  color: #fcdf5f;
+  padding: 11px 8px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 .tableContainer-sl{
   color: white;
   font-size: 18px;
   text-align: center;
   overflow-y: scroll;
-  height: 680px;
+  height: 80vh;
 }
 
 .mytable-sl{
   border-collapse: collapse;
+  width: 25vw;
 }
 
 .mytable-sl th{
   background-color: rgb(44, 44, 44);
-  padding: 4px 10px 4px 10px;
-  color: rgb(228, 228, 228);
+  padding: 4px 0px 4px 0px;
+  color: rgb(221, 221, 221);
   text-shadow: 1px 1px 6px rgb(121, 121, 121), 1px 1px 6px rgb(153, 152, 153);
   font-size: 12px;
+  font-size: 14px;
+  
 }
 
 .mytable-sl td{
@@ -37,10 +69,30 @@
 }
 
 .reserve{
-  color: rgb(223, 173, 82);
-  border: 1px solid rgb(122, 97, 25);
   border-radius: 10px;
   padding: 2px 8px 2px 8px;
+  animation: reserveAnimation 10s infinite;
+}
+
+@keyframes reserveAnimation {
+  0%{
+    border: 1px solid rgb(91, 176, 255);  
+    box-shadow: 0 0 10px #007bb4;
+    color: rgb(85, 221, 255);
+    text-shadow: 1px 1px 10px rgb(76, 79, 255), 1px 1px 10px rgb(64, 30, 255);
+  }
+  50%{
+    border: 1px solid rgb(0, 77, 150);
+    box-shadow: 0 0 10px #09005e;
+    color: rgb(197, 234, 255);
+    text-shadow: 1px 1px 10px rgb(68, 106, 138), 1px 1px 10px rgb(108, 159, 206);
+  }
+  100%{
+    border: 1px solid rgb(91, 176, 255);
+    box-shadow: 0 0 10px #007bb4;
+    color: rgb(85, 221, 255);
+    text-shadow: 1px 1px 10px rgb(76, 79, 255), 1px 1px 10px rgb(64, 30, 255);
+  }
 }
 
 /*
@@ -48,7 +100,8 @@
 */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
+    height: 2px;
 }
 
 /* Track */

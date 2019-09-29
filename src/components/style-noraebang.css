@@ -1,16 +1,23 @@
 /* Desktop Styles */
-@media only screen and (min-width: 1250px) {
+
+@media only screen and (min-width: 1365px) {
     /* For Desktop-SMALLER: */
     .listOfSongsOuter{
-        padding: 40px 0 0 70px;
+        padding: 0px 0 0 24px;
         float: left;
         height: 200px;
     }
     
     .youtubeScreenOuter{
-        padding: 60px 80px 0 0;
+        padding: 0px 24px 0 0;
         float: right;
         height: 200px;
+    }
+
+    .reserveContainer{
+        overflow-y: scroll;
+        height: 36px;
+        width: 916px;
     }
     
     .inprogress{
@@ -22,35 +29,21 @@
 @media only screen and (min-width: 1550px) {
     /* For Desktop-MEDIUM: */
     .listOfSongsOuter{
-        padding: 40px 0 0 70px;
-        float: left;
-        height: 200px;
-    }
-    
-    .youtubeScreenOuter{
-        padding: 60px 80px 0 0;
-        float: right;
-        height: 200px;
-    }
-
-    .inprogress{
-        display: none;
-    }
-    
-}
-
-@media only screen and (min-width: 1850px) {
-    /* For Desktop-LARGE: */
-    .listOfSongsOuter{
         padding: 0px 0 0 70px;
         float: left;
         height: 200px;
     }
     
     .youtubeScreenOuter{
-        padding: 0 80px 0 0;
+        padding: 0px 80px 0 0;
         float: right;
         height: 200px;
+    }
+
+    .reserveContainer{
+        overflow-y: scroll;
+        height: 36px;
+        width: 916px;
     }
 
     .inprogress{
@@ -60,7 +53,7 @@
 }
   
 /* Mobile Styles */
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1364px) {
     /* For Mobile: */
     .listOfSongsOuter, .youtubeScreenOuter{
         display: none;
@@ -68,6 +61,21 @@
 
     .inprogress{
         color: white;
+        text-shadow: 1px 1px 12px rgb(255, 152, 18), 1px 1px 12px rgb(255, 230, 0);
+        display: block;
+    }
+}
+
+/* If Height is too short, then block */
+@media only screen and (max-height: 767px) {
+    /* For Mobile: */
+    .listOfSongsOuter, .youtubeScreenOuter{
+        display: none;
+    }
+
+    .inprogress{
+        color: white;
+        text-shadow: 1px 1px 12px rgb(255, 152, 18), 1px 1px 12px rgb(255, 230, 0);
         display: block;
     }
 }
@@ -104,31 +112,58 @@
     text-align: center;
 }
 
+.youtubeScreen{
+    border-radius: 8px;
+    padding: 8px;
+    animation: borderAnimation1 2s infinite;
+}
+
+@keyframes borderAnimation1 {
+    0%{
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 18px #ffcb69;
+    }
+    33%{
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 13px #ffcb69;
+    }
+    50%{
+        border: 2px solid rgb(80, 176, 255);
+        box-shadow: 0 0 8px #004bbd;
+    }
+    75%{
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 13px #ffcb69;
+    }
+    100%{
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 18px #ffcb69;
+    }
+}
+
 .currentHeaderContainerContainer{
-    padding-top: 20px;
+    padding-top: 8px;
 }
 
 .currentHeaderContainer{
     padding: 12px;
-    border: 2px solid rgb(172, 129, 0);
-    box-shadow: 0 0 6px #c5d300;
     border-radius: 8px;
 
-    animation: borderAnimation 4s infinite;
+    animation: borderAnimation2 6s infinite;
 }
 
-@keyframes borderAnimation {
+@keyframes borderAnimation2 {
     0%{
-        border: 2px solid rgb(172, 129, 0);
-        box-shadow: 0 0 6px #c5d300;
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 22px #ffcb69;
     }
     50%{
-        border: 2px solid rgb(216, 32, 0);
-        box-shadow: 0 0 6px #ff5b5b;
+        border: 2px solid rgb(68, 255, 99);
+        box-shadow: 0 0 10px #188d4d;
     }
     100%{
-        border: 2px solid rgb(172, 129, 0);
-        box-shadow: 0 0 6px #c5d300;
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 22px #ffcb69;
     }
 }
 
@@ -160,6 +195,10 @@
     color: rgb(221, 255, 142);
 }
 
+.currentHeaderTitle{
+    color: rgb(160, 185, 102);
+}
+
 .cancelBtn{
     color: rgb(255, 121, 121);
     border: 1px solid rgb(175, 175, 175);
@@ -171,12 +210,33 @@
     color: rgb(255, 0, 119);
 }
 
-.reserveContainer{
-    padding-top: 38px;
+.reserveContainerContainer{
+    padding-top: 30px;
 }
 
-.reservedHeader{
-    color: rgb(221, 255, 142);
+.reserveContainer{
+    padding: 10px;
+    border-radius: 8px;
+    animation: borderAnimation3 8s infinite;
+}
+
+@keyframes borderAnimation3 {
+    0%{
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 18px #ffcb69;
+    }
+    50%{
+        border: 2px solid rgb(170, 0, 71);
+        box-shadow: 0 0 12px #ff1f69;
+    }
+    100%{
+        border: 2px solid rgb(250, 189, 132);
+        box-shadow: 0 0 18px #ffcb69;
+    }
+}
+
+.reservedHeaderTitle{
+    color: rgb(160, 185, 102);
 }
 
 .reserveBody{
@@ -191,8 +251,7 @@
     padding: 4px;
     color: rgb(253, 214, 106);
     text-shadow: 1px 1px 6px rgb(251, 255, 18), 1px 1px 6px rgb(136, 134, 3);
-    border: 1px solid rgb(255, 207, 103);
-    border-radius: 8px;
+    
 }
 
 .song-item-inner:hover{

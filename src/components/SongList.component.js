@@ -106,18 +106,24 @@ export default class SongList extends Component {
     return (
       <div className="tableContainer-sl">
         <h4> 노래책 </h4>
-          <table className="mytable-sl">
-            <thead>
-              <tr>
-                <th> 가수 <SortArrow clickButton={this.handleSortArtist.bind(this)}/></th>
-                <th> 재목 <SortArrow clickButton={this.handleSortTitle.bind(this)}/></th>
-                <th> 예약 </th>
-              </tr>
-            </thead>
-            <tbody>
-              { this.tabRow() }
-            </tbody>
-          </table>
+        <div> 
+          <p>
+            <input className="searchbar" type="text" placeholder="검색" />
+            <span className="schBtnContainer"><button className="searchBtn"> 검색 </button></span>
+          </p>
+        </div>
+        <table className="mytable-sl">
+          <thead>
+            <tr>
+              <th> 가수 <SortArrow clickButton={this.handleSortArtist.bind(this)}/></th>
+              <th> 재목 <SortArrow clickButton={this.handleSortTitle.bind(this)}/></th>
+              <th> 예약 </th>
+            </tr>
+          </thead>
+          <tbody>
+            { this.tabRow() }
+          </tbody>
+        </table>
 
           {message}
       </div>
