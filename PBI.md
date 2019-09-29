@@ -23,6 +23,7 @@
  * @PBI feature where you can save playlists
  * @PBI feature where initial noraebang-app screen (empty youtube video) shows funny splash screen "Make Reservations to get app started!" kinda thing
     currently it shows ugly error message
+ * @TODO organize components and styles into readable directories
 
 <summary of major features>
  - <Feat002-1>Login Feature
