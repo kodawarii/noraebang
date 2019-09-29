@@ -173,31 +173,43 @@
 }
 
 .playArrow{
-    animation: arrowAnimation 4s infinite;
+    animation: arrowAnimation 0.64s infinite;
 }
 
 @keyframes arrowAnimation {
     0%{
-        color: rgb(221, 255, 142);
+        color: rgb(136, 158, 83);
         transform: rotate(0deg);
     }
     50%{
         color: rgb(255, 153, 0);
+        text-shadow: 0px 0px 0px rgb(255, 152, 18), 1px 1px 12px rgb(255, 230, 0);
         transform: rotate(180deg);
     }
     100%{
-        color: rgb(221, 255, 142);
+        color: rgb(136, 158, 83);
         transform: rotate(0deg);
     }
 }
 
 .currentHeader{
     padding: 0 0 0 12px;
-    color: rgb(221, 255, 142);
 }
 
 .currentHeaderTitle{
     color: rgb(160, 185, 102);
+}
+
+.currentHeaderTitle:hover{
+    color: rgb(160, 185, 102);
+}
+
+.currentSongName{
+    color: rgb(221, 255, 142);
+}
+
+.currentSongName:hover{
+    color: rgb(221, 255, 142);
 }
 
 .cancelBtn{
