@@ -12,10 +12,11 @@ export default class ReservationList extends Component {
 
   render() {
 
+    let cancelReserved = this.props.cancelReserved.bind(this);
     let processedList = this.props.reservationList.map(function(object, i){
         return <span className="song-item-outer" key={i}> 
         <span className="song-item-inner"> {object} </span>
-        <span> X </span>
+        <span onClick={cancelReserved.bind(this, i)} className="x-sign"> ✖ </span>
         </span>
         
     });

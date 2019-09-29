@@ -49,18 +49,9 @@ export default class Noraebang extends Component {
       this.state.queueOfIDs.push(id.slice(32, id.length));
 
       this.setState({updater: "x"});
-
-      // PLAY NOW feature
-      //this.setState({currentVideoID: id.slice(32, id.length)});
-      //this.setState({currentVideoDetails: artist + songname});
-
-      //console.log(this.state.queueOfDetails);
-      //console.log(this.state.queueOfIDs);
   }
 
   playNextSong(){
-    //console.log(this.state.queueOfIDs);
-
     this.setState({
       currentVideoID: this.state.queueOfIDs.shift(),
       currentVideoDetails: this.state.queueOfDetails.shift()
@@ -77,6 +68,12 @@ export default class Noraebang extends Component {
       currentVideoDetails: this.state.queueOfDetails.shift(),
       autoPlay: 0
     });
+  }
+
+  cancelReserved(index){
+    this.state.queueOfIDs.splice(index, 1);
+    this.state.queueOfDetails.splice(index, 1);
+    this.setState({updater: "x"});
   }
 
   render() {
@@ -114,6 +111,7 @@ export default class Noraebang extends Component {
               currentVideoDetails = {this.state.currentVideoDetails}
               cancelSong = {this.cancelCurrentSong.bind(this)}
               nextSong = {this.startSong.bind(this)}
+              cancelReserved = {this.cancelReserved.bind(this)}
               />
             </div>
         </div>
