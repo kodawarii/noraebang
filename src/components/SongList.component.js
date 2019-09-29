@@ -100,7 +100,7 @@ export default class SongList extends Component {
     let message = '';
 
     if(this.state.songList.length === 0){
-      message =  <Empty/>
+      message =  <Empty isnoraebang={true}/>
     }
 
     return (

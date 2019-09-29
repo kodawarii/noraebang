@@ -281,7 +281,7 @@ export default class Index extends Component {
     let message = '';
 
     if(this.state.songList.length === 0){
-      message =  <Empty/>
+      message =  <Empty isnoraebang={false}/>
     }
 
     return (
