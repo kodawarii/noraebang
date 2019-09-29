@@ -16,6 +16,7 @@ export default class Noraebang extends Component {
       updater: "",
       videoHeight: 450,
       videoWidth: 916,
+      autoPlay: 1,
       currentVideoID: "RHUSmCcoCtQ",
       currentVideoDetails: "노래방",
       queueOfDetails: [],
@@ -60,8 +61,22 @@ export default class Noraebang extends Component {
   playNextSong(){
     //console.log(this.state.queueOfIDs);
 
-    this.setState({currentVideoID: this.state.queueOfIDs.shift()});
-    this.setState({currentVideoDetails: this.state.queueOfDetails.shift()});
+    this.setState({
+      currentVideoID: this.state.queueOfIDs.shift(),
+      currentVideoDetails: this.state.queueOfDetails.shift()
+    });
+  }
+
+  startSong(){
+    this.setState({autoPlay: 1});
+  }
+
+  cancelCurrentSong(){
+    this.setState({
+      currentVideoID: this.state.queueOfIDs.shift(), 
+      currentVideoDetails: this.state.queueOfDetails.shift(),
+      autoPlay: 0
+    });
   }
 
   render() {
@@ -69,7 +84,7 @@ export default class Noraebang extends Component {
         height: this.state.videoHeight,
         width: this.state.videoWidth,
         playerVars: {
-          autoplay: 0
+          autoplay: this.state.autoPlay
         },
     };
 
@@ -84,7 +99,7 @@ export default class Noraebang extends Component {
             </div>
         </div>
         <div className="youtubeScreenOuter">
-            <div className="youtubeScreen"> 
+            <div className="youtubeScreen">
                 <YouTube
                 videoId={this.state.currentVideoID}
                 opts={opts}
@@ -97,6 +112,8 @@ export default class Noraebang extends Component {
               <ReservationList
               reservationList = {this.state.queueOfDetails}
               currentVideoDetails = {this.state.currentVideoDetails}
+              cancelSong = {this.cancelCurrentSong.bind(this)}
+              nextSong = {this.startSong.bind(this)}
               />
             </div>
         </div>

@@ -29,7 +29,9 @@ export default class ReservationList extends Component {
                   <span className="currentHeaderTitle"> 지금재생: </span> 
                   <b>{this.props.currentVideoDetails}</b> 
                 </span>
-                <span className="currentHeader"> <span className="cancelBtn"> 최소 </span></span>
+                <span className="currentHeader"> 
+                  <span className="cancelBtn" onClick={this.props.cancelSong}> 최소 </span>
+                </span>
             </span>
           </div>
           <div className="reserveContainerContainer">
