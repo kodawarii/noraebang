@@ -16,8 +16,8 @@ export default class Noraebang extends Component {
       updater: "",
       videoHeight: 450,
       videoWidth: 916,
-      currentVideoID: "lFy3b98_lIc",
-      currentVideoDetails: "사랑비",
+      currentVideoID: "RHUSmCcoCtQ",
+      currentVideoDetails: "노래방",
       queueOfDetails: [],
       queueOfIDs: []
     };
@@ -69,7 +69,7 @@ export default class Noraebang extends Component {
         height: this.state.videoHeight,
         width: this.state.videoWidth,
         playerVars: {
-          autoplay: 1
+          autoplay: 0
         },
     };
 
@@ -101,7 +101,7 @@ export default class Noraebang extends Component {
             </div>
         </div>
         <div className="inprogress">
-            <h3> mobile app coming soon ...</h3>
+            <h3> mobile app coming soon ... (If you are on desktop Press F11 and go full screen - available only for >1365px) </h3>
         </div>
       </div>
     );

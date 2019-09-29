@@ -82,7 +82,7 @@
 
 /* Common Styles for both Desktop and Mobile */
 .noraebang{
-    background-color: rgb(8, 8, 8);
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('/bg1.jpg');
     z-index: -1;
     position: absolute;
     top: 50px;
