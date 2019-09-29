@@ -251,7 +251,19 @@
     padding: 4px;
     color: rgb(253, 214, 106);
     text-shadow: 1px 1px 6px rgb(251, 255, 18), 1px 1px 6px rgb(136, 134, 3);
-    
+    animation: success 0.2s;
+}
+
+@keyframes success {
+    0%{
+        color: rgb(109, 109, 109);
+        text-shadow: 1px 1px 16px rgb(150, 150, 143), 1px 1px 16px rgb(100, 100, 61);
+        font-size: 40px;
+    }
+    100%{
+        color: rgb(253, 214, 106);
+        text-shadow: 1px 1px 6px rgb(251, 255, 18), 1px 1px 6px rgb(136, 134, 3);
+    }
 }
 
 .song-item-inner:hover{
