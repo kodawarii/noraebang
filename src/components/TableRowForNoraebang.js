@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 
 class TableRowForNoraebang extends Component {
 
-    handleClick() {
-    
+  constructor(props){
+    super(props);
+
+    this.state = {
+      classes: "reserve"
+    }
+  }
+
+  handleClick() {
     this.props.makeReservation(this.props.obj.artist, this.props.obj.song_name, this.props.obj.URL);
   } 
 
@@ -11,7 +18,7 @@ class TableRowForNoraebang extends Component {
     let reserve;
 
     if(this.props.obj.URL !== ""){
-      reserve = <span href="#" onClick={this.handleClick.bind(this)} className="reserve"> ▷ </span>
+      reserve = <span href="#" onClick={this.handleClick.bind(this)} className={this.state.classes}> ▷ </span>
     }
 
     return (

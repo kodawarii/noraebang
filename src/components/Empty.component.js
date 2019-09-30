@@ -8,7 +8,6 @@ export default class Empty extends Component {
   render() {
 
     let toShow;
-    console.log(this.props.isnoraebang);
     if(this.props.isnoraebang){
       toShow = <div>
           <div className="loading-nb">

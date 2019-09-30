@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
 export default class ReservationList extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      nothing: ""
-    };
-  }
-
   render() {
 
     let cancelReserved = this.props.cancelReserved.bind(this);
