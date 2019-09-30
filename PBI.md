@@ -26,7 +26,7 @@
  * @TODO organize components and styles into readable directories
 
 <summary of major features>
- - <Feat002-1>Login Feature
+ - [in-progress: 2019/09/30] <Feat002-1>Login Feature
  - <FEAT004> Blog Feature (Must be logged in to add posts)
  - <Feat002-2> Admin App Feature (Must be logged in to access - link not shown unless logged in)
- - <FEAT001> Karaoke App Feature (no login required) - Front end mechanics
+ - [on hold from: 2019/09/30] <FEAT001> Karaoke App Feature (no login required) - Front end mechanics
