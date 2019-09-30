@@ -66,7 +66,7 @@ export default class Noraebang extends Component {
     this.setState({
       currentVideoID: this.state.queueOfIDs.shift(), 
       currentVideoDetails: this.state.queueOfDetails.shift(),
-      autoPlay: 0
+      autoPlay: 1
     });
   }
 
